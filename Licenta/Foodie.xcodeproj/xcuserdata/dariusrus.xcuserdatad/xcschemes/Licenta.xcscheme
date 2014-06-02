@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0C931F7190FF3FE0047CB9B"
-               BuildableName = "Licenta.app"
+               BuildableName = "Foodie.app"
                BlueprintName = "Foodie"
                ReferencedContainer = "container:Foodie.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0C93212190FF3FE0047CB9B"
-               BuildableName = "LicentaTests.xctest"
+               BuildableName = "FoodieTests.xctest"
                BlueprintName = "FoodieTests"
                ReferencedContainer = "container:Foodie.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C931F7190FF3FE0047CB9B"
-            BuildableName = "Licenta.app"
+            BuildableName = "Foodie.app"
             BlueprintName = "Foodie"
             ReferencedContainer = "container:Foodie.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C931F7190FF3FE0047CB9B"
-            BuildableName = "Licenta.app"
+            BuildableName = "Foodie.app"
             BlueprintName = "Foodie"
             ReferencedContainer = "container:Foodie.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C931F7190FF3FE0047CB9B"
-            BuildableName = "Licenta.app"
+            BuildableName = "Foodie.app"
             BlueprintName = "Foodie"
             ReferencedContainer = "container:Foodie.xcodeproj">
          </BuildableReference>

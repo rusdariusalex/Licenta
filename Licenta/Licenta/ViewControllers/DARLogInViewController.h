@@ -22,6 +22,10 @@
 - (IBAction)showSignIn:(id)sender;
 - (IBAction)showSignUp:(id)sender;
 
+- (IBAction)hideSignIn:(id)sender;
+- (IBAction)hideSignUp:(id)sender;
+
+
 
 
 @end

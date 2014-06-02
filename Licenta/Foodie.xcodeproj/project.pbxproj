@@ -58,6 +58,7 @@
 		D0DFEDC4193C644300A6C951 /* POPSpringAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0DFEDA9193C644300A6C951 /* POPSpringAnimation.mm */; };
 		D0DFEDC5193C644300A6C951 /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0DFEDAD193C644300A6C951 /* POPVector.mm */; };
 		D0DFEDC6193C644300A6C951 /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DFEDB0193C644300A6C951 /* TransformationMatrix.cpp */; };
+		D0DFEDC8193C6A7200A6C951 /* icon_x_over.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFEDC7193C6A7200A6C951 /* icon_x_over.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +162,7 @@
 		D0DFEDB0193C644300A6C951 /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
 		D0DFEDB1193C644300A6C951 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
 		D0DFEDB2193C644300A6C951 /* UnitBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitBezier.h; sourceTree = "<group>"; };
+		D0DFEDC7193C6A7200A6C951 /* icon_x_over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_x_over.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 		D0DFED03193C4DAD00A6C951 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0DFEDC7193C6A7200A6C951 /* icon_x_over.png */,
 				D0DFED2A193C52E700A6C951 /* logo.png */,
 				D0DFED28193C517600A6C951 /* launch2.png */,
 				D0DFED04193C4DAD00A6C951 /* AppIcon29x29.png */,
@@ -461,6 +464,7 @@
 				D0DFED15193C4DAD00A6C951 /* AppIcon40x40.png in Resources */,
 				D0DFEDB4193C644300A6C951 /* pop-Info.plist in Resources */,
 				D0DFED1F193C4DAD00A6C951 /* AppIcon76x76.png in Resources */,
+				D0DFEDC8193C6A7200A6C951 /* icon_x_over.png in Resources */,
 				D0C9320E190FF3FE0047CB9B /* Images.xcassets in Resources */,
 				D0DFED29193C517600A6C951 /* launch2.png in Resources */,
 				D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */,
