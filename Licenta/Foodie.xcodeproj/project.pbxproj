@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00BEAC2193C75B500BF4335 /* textfield_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D00BEAC0193C75B500BF4335 /* textfield_background.png */; };
+		D00BEAC3193C75B500BF4335 /* textfieldImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D00BEAC1193C75B500BF4335 /* textfieldImage.png */; };
 		D0C931FC190FF3FE0047CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FB190FF3FE0047CB9B /* Foundation.framework */; };
 		D0C931FE190FF3FE0047CB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */; };
 		D0C93200190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
@@ -72,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D00BEAC0193C75B500BF4335 /* textfield_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfield_background.png; sourceTree = "<group>"; };
+		D00BEAC1193C75B500BF4335 /* textfieldImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfieldImage.png; sourceTree = "<group>"; };
 		D0C931F8190FF3FE0047CB9B /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C931FB190FF3FE0047CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -265,6 +269,8 @@
 		D0DFED03193C4DAD00A6C951 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D00BEAC0193C75B500BF4335 /* textfield_background.png */,
+				D00BEAC1193C75B500BF4335 /* textfieldImage.png */,
 				D0DFEDC7193C6A7200A6C951 /* icon_x_over.png */,
 				D0DFED2A193C52E700A6C951 /* logo.png */,
 				D0DFED28193C517600A6C951 /* launch2.png */,
@@ -452,6 +458,7 @@
 			files = (
 				D0DFED27193C4FA600A6C951 /* DARLogInViewController.xib in Resources */,
 				D0DFEDB3193C644300A6C951 /* InfoPlist.strings in Resources */,
+				D00BEAC3193C75B500BF4335 /* textfieldImage.png in Resources */,
 				D0DFED1E193C4DAD00A6C951 /* AppIcon72x72@2x.png in Resources */,
 				D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */,
 				D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */,
@@ -469,6 +476,7 @@
 				D0DFED29193C517600A6C951 /* launch2.png in Resources */,
 				D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */,
 				D0DFED20193C4DAD00A6C951 /* AppIcon76x76@2x.png in Resources */,
+				D00BEAC2193C75B500BF4335 /* textfield_background.png in Resources */,
 				D0DFED2B193C52E700A6C951 /* logo.png in Resources */,
 				D0DFED1C193C4DAD00A6C951 /* AppIcon60x60@2x.png in Resources */,
 				D0DFED1B193C4DAD00A6C951 /* AppIcon60x60.png in Resources */,

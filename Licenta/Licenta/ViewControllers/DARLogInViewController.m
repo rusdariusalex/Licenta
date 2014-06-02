@@ -10,7 +10,9 @@
 #import "POP.h"
 
 
-@interface DARLogInViewController ()
+@interface DARLogInViewController (){
+    UIGestureRecognizer *dismissKeyboard;
+}
 
 @end
 
@@ -33,6 +35,17 @@
     self.showSignInButton.alpha = 0.0;
     self.showSignUpButton.alpha = 0.0;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    self.signInEmailTextField.delegate = self;
+    self.signInPasswordTextField.delegate = self;
+    self.signUpEmailTextField.delegate = self;
+    self.signUpNameTextField.delegate = self;
+    self.signUpPasswordTextField.delegate = self;
+    
+    dismissKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard:)];
+    [self.greyView addGestureRecognizer:dismissKeyboard];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -76,6 +89,7 @@
 }
 
 - (IBAction)showSignIn:(id)sender {
+    [self.view endEditing:YES];
     
     POPSpringAnimation *popOutAnimation = [POPSpringAnimation animation];
     popOutAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
@@ -87,11 +101,13 @@
     [self.signInView pop_addAnimation:popOutAnimation forKey:@"pop"];
     
     [UIView animateWithDuration:0.5 animations:^{
-        self.greyView.alpha = 0.5;
+        self.greyView.alpha = 0.6;
     }];
 }
 
 - (IBAction)showSignUp:(id)sender {
+    [self.view endEditing:YES];
+    
     POPSpringAnimation *popOutAnimation = [POPSpringAnimation animation];
     popOutAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
     
@@ -102,11 +118,12 @@
     [self.signUpView pop_addAnimation:popOutAnimation forKey:@"pop"];
     
     [UIView animateWithDuration:0.5 animations:^{
-        self.greyView.alpha = 0.5;
+        self.greyView.alpha = 0.6;
     }];
 }
 
 - (IBAction)hideSignIn:(id)sender {
+    [self.view endEditing:YES];
     
     POPSpringAnimation *popOutAnimation = [POPSpringAnimation animation];
     popOutAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
@@ -124,6 +141,8 @@
 }
 
 - (IBAction)hideSignUp:(id)sender {
+    [self.view endEditing:YES];
+    
     POPSpringAnimation *popOutAnimation = [POPSpringAnimation animation];
     popOutAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
     
@@ -138,5 +157,40 @@
     }];
 }
 
+- (IBAction)doSignUp:(id)sender {
+    [self.view endEditing:YES];
+}
+
+- (IBAction)doSignIn:(id)sender {
+    [self.view endEditing:YES];
+}
+
+
+#pragma mark - Keyboard
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.view setFrame:CGRectMake(0,-196,320,568)];
+    }];
+}
+
+-(void)keyboardDidHide:(NSNotification *)notification
+{
+    [UIView animateWithDuration:0.1 animations:^{
+        [self.view setFrame:CGRectMake(0,0,320,568)];
+    }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+- (void)dismissKeyboard:(UIGestureRecognizer *)gestureRecognizer{
+    [self.view endEditing:YES];
+}
 
 @end

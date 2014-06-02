@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DARLogInViewController : UIViewController
+@interface DARLogInViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UIButton *showSignInButton;
@@ -18,12 +18,23 @@
 @property (weak, nonatomic) IBOutlet UIView *signUpView;
 @property (weak, nonatomic) IBOutlet UIView *greyView;
 
+@property (weak, nonatomic) IBOutlet UITextField *signUpNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *signUpEmailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *signUpPasswordTextField;
+
+@property (weak, nonatomic) IBOutlet UITextField *signInEmailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *signInPasswordTextField;
+
+
 
 - (IBAction)showSignIn:(id)sender;
 - (IBAction)showSignUp:(id)sender;
 
 - (IBAction)hideSignIn:(id)sender;
 - (IBAction)hideSignUp:(id)sender;
+
+- (IBAction)doSignUp:(id)sender;
+- (IBAction)doSignIn:(id)sender;
 
 
 
