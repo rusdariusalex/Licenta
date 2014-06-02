@@ -19,6 +19,21 @@
 		D0C93217190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
 		D0C9321F190FF3FE0047CB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0C9321D190FF3FE0047CB9B /* InfoPlist.strings */; };
 		D0C93221190FF3FE0047CB9B /* LicentaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C93220190FF3FE0047CB9B /* LicentaTests.m */; };
+		D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED04193C4DAD00A6C951 /* AppIcon29x29.png */; };
+		D0DFED14193C4DAD00A6C951 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED05193C4DAD00A6C951 /* AppIcon29x29@2x.png */; };
+		D0DFED15193C4DAD00A6C951 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED06193C4DAD00A6C951 /* AppIcon40x40.png */; };
+		D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED07193C4DAD00A6C951 /* AppIcon40x40@2x.png */; };
+		D0DFED17193C4DAD00A6C951 /* AppIcon50x50.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED08193C4DAD00A6C951 /* AppIcon50x50.png */; };
+		D0DFED18193C4DAD00A6C951 /* AppIcon50x50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED09193C4DAD00A6C951 /* AppIcon50x50@2x.png */; };
+		D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED0A193C4DAD00A6C951 /* AppIcon57x57.png */; };
+		D0DFED1A193C4DAD00A6C951 /* AppIcon57x57@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED0B193C4DAD00A6C951 /* AppIcon57x57@2x.png */; };
+		D0DFED1B193C4DAD00A6C951 /* AppIcon60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED0C193C4DAD00A6C951 /* AppIcon60x60.png */; };
+		D0DFED1C193C4DAD00A6C951 /* AppIcon60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED0D193C4DAD00A6C951 /* AppIcon60x60@2x.png */; };
+		D0DFED1D193C4DAD00A6C951 /* AppIcon72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED0E193C4DAD00A6C951 /* AppIcon72x72.png */; };
+		D0DFED1E193C4DAD00A6C951 /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED0F193C4DAD00A6C951 /* AppIcon72x72@2x.png */; };
+		D0DFED1F193C4DAD00A6C951 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED10193C4DAD00A6C951 /* AppIcon76x76.png */; };
+		D0DFED20193C4DAD00A6C951 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED11193C4DAD00A6C951 /* AppIcon76x76@2x.png */; };
+		D0DFED21193C4DAD00A6C951 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED12193C4DAD00A6C951 /* launch.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,22 +47,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D0C931F8190FF3FE0047CB9B /* Licenta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Licenta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C931F8190FF3FE0047CB9B /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C931FB190FF3FE0047CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D0C931FF190FF3FE0047CB9B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		D0C93203190FF3FE0047CB9B /* Licenta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Licenta-Info.plist"; sourceTree = "<group>"; };
+		D0C93203190FF3FE0047CB9B /* Foodie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Foodie-Info.plist"; sourceTree = "<group>"; };
 		D0C93205190FF3FE0047CB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0C93207190FF3FE0047CB9B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D0C93209190FF3FE0047CB9B /* Licenta-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Licenta-Prefix.pch"; sourceTree = "<group>"; };
+		D0C93209190FF3FE0047CB9B /* Foodie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Foodie-Prefix.pch"; sourceTree = "<group>"; };
 		D0C9320A190FF3FE0047CB9B /* DARAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DARAppDelegate.h; sourceTree = "<group>"; };
 		D0C9320B190FF3FE0047CB9B /* DARAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DARAppDelegate.m; sourceTree = "<group>"; };
 		D0C9320D190FF3FE0047CB9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D0C93213190FF3FE0047CB9B /* LicentaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LicentaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C93213190FF3FE0047CB9B /* FoodieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C93214190FF3FE0047CB9B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D0C9321C190FF3FE0047CB9B /* LicentaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LicentaTests-Info.plist"; sourceTree = "<group>"; };
+		D0C9321C190FF3FE0047CB9B /* FoodieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoodieTests-Info.plist"; sourceTree = "<group>"; };
 		D0C9321E190FF3FE0047CB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0C93220190FF3FE0047CB9B /* LicentaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LicentaTests.m; sourceTree = "<group>"; };
+		D0DFED04193C4DAD00A6C951 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
+		D0DFED05193C4DAD00A6C951 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
+		D0DFED06193C4DAD00A6C951 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
+		D0DFED07193C4DAD00A6C951 /* AppIcon40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon40x40@2x.png"; sourceTree = "<group>"; };
+		D0DFED08193C4DAD00A6C951 /* AppIcon50x50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon50x50.png; sourceTree = "<group>"; };
+		D0DFED09193C4DAD00A6C951 /* AppIcon50x50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon50x50@2x.png"; sourceTree = "<group>"; };
+		D0DFED0A193C4DAD00A6C951 /* AppIcon57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon57x57.png; sourceTree = "<group>"; };
+		D0DFED0B193C4DAD00A6C951 /* AppIcon57x57@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon57x57@2x.png"; sourceTree = "<group>"; };
+		D0DFED0C193C4DAD00A6C951 /* AppIcon60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon60x60.png; sourceTree = "<group>"; };
+		D0DFED0D193C4DAD00A6C951 /* AppIcon60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon60x60@2x.png"; sourceTree = "<group>"; };
+		D0DFED0E193C4DAD00A6C951 /* AppIcon72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon72x72.png; sourceTree = "<group>"; };
+		D0DFED0F193C4DAD00A6C951 /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
+		D0DFED10193C4DAD00A6C951 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
+		D0DFED11193C4DAD00A6C951 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		D0DFED12193C4DAD00A6C951 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +117,8 @@
 		D0C931F9190FF3FE0047CB9B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0C931F8190FF3FE0047CB9B /* Licenta.app */,
-				D0C93213190FF3FE0047CB9B /* LicentaTests.xctest */,
+				D0C931F8190FF3FE0047CB9B /* Foodie.app */,
+				D0C93213190FF3FE0047CB9B /* FoodieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +137,7 @@
 		D0C93201190FF3FE0047CB9B /* Licenta */ = {
 			isa = PBXGroup;
 			children = (
+				D0DFED03193C4DAD00A6C951 /* Resources */,
 				D0C9320A190FF3FE0047CB9B /* DARAppDelegate.h */,
 				D0C9320B190FF3FE0047CB9B /* DARAppDelegate.m */,
 				D0C9320D190FF3FE0047CB9B /* Images.xcassets */,
@@ -118,10 +149,10 @@
 		D0C93202190FF3FE0047CB9B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0C93203190FF3FE0047CB9B /* Licenta-Info.plist */,
+				D0C93203190FF3FE0047CB9B /* Foodie-Info.plist */,
 				D0C93204190FF3FE0047CB9B /* InfoPlist.strings */,
 				D0C93207190FF3FE0047CB9B /* main.m */,
-				D0C93209190FF3FE0047CB9B /* Licenta-Prefix.pch */,
+				D0C93209190FF3FE0047CB9B /* Foodie-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,18 +169,40 @@
 		D0C9321B190FF3FE0047CB9B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0C9321C190FF3FE0047CB9B /* LicentaTests-Info.plist */,
+				D0C9321C190FF3FE0047CB9B /* FoodieTests-Info.plist */,
 				D0C9321D190FF3FE0047CB9B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D0DFED03193C4DAD00A6C951 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0DFED04193C4DAD00A6C951 /* AppIcon29x29.png */,
+				D0DFED05193C4DAD00A6C951 /* AppIcon29x29@2x.png */,
+				D0DFED06193C4DAD00A6C951 /* AppIcon40x40.png */,
+				D0DFED07193C4DAD00A6C951 /* AppIcon40x40@2x.png */,
+				D0DFED08193C4DAD00A6C951 /* AppIcon50x50.png */,
+				D0DFED09193C4DAD00A6C951 /* AppIcon50x50@2x.png */,
+				D0DFED0A193C4DAD00A6C951 /* AppIcon57x57.png */,
+				D0DFED0B193C4DAD00A6C951 /* AppIcon57x57@2x.png */,
+				D0DFED0C193C4DAD00A6C951 /* AppIcon60x60.png */,
+				D0DFED0D193C4DAD00A6C951 /* AppIcon60x60@2x.png */,
+				D0DFED0E193C4DAD00A6C951 /* AppIcon72x72.png */,
+				D0DFED0F193C4DAD00A6C951 /* AppIcon72x72@2x.png */,
+				D0DFED10193C4DAD00A6C951 /* AppIcon76x76.png */,
+				D0DFED11193C4DAD00A6C951 /* AppIcon76x76@2x.png */,
+				D0DFED12193C4DAD00A6C951 /* launch.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D0C931F7190FF3FE0047CB9B /* Licenta */ = {
+		D0C931F7190FF3FE0047CB9B /* Foodie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0C93224190FF3FE0047CB9B /* Build configuration list for PBXNativeTarget "Licenta" */;
+			buildConfigurationList = D0C93224190FF3FE0047CB9B /* Build configuration list for PBXNativeTarget "Foodie" */;
 			buildPhases = (
 				D0C931F4190FF3FE0047CB9B /* Sources */,
 				D0C931F5190FF3FE0047CB9B /* Frameworks */,
@@ -159,14 +212,14 @@
 			);
 			dependencies = (
 			);
-			name = Licenta;
+			name = Foodie;
 			productName = Licenta;
-			productReference = D0C931F8190FF3FE0047CB9B /* Licenta.app */;
+			productReference = D0C931F8190FF3FE0047CB9B /* Foodie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D0C93212190FF3FE0047CB9B /* LicentaTests */ = {
+		D0C93212190FF3FE0047CB9B /* FoodieTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0C93227190FF3FE0047CB9B /* Build configuration list for PBXNativeTarget "LicentaTests" */;
+			buildConfigurationList = D0C93227190FF3FE0047CB9B /* Build configuration list for PBXNativeTarget "FoodieTests" */;
 			buildPhases = (
 				D0C9320F190FF3FE0047CB9B /* Sources */,
 				D0C93210190FF3FE0047CB9B /* Frameworks */,
@@ -177,9 +230,9 @@
 			dependencies = (
 				D0C93219190FF3FE0047CB9B /* PBXTargetDependency */,
 			);
-			name = LicentaTests;
+			name = FoodieTests;
 			productName = LicentaTests;
-			productReference = D0C93213190FF3FE0047CB9B /* LicentaTests.xctest */;
+			productReference = D0C93213190FF3FE0047CB9B /* FoodieTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -197,7 +250,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D0C931F3190FF3FE0047CB9B /* Build configuration list for PBXProject "Licenta" */;
+			buildConfigurationList = D0C931F3190FF3FE0047CB9B /* Build configuration list for PBXProject "Foodie" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -209,8 +262,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0C931F7190FF3FE0047CB9B /* Licenta */,
-				D0C93212190FF3FE0047CB9B /* LicentaTests */,
+				D0C931F7190FF3FE0047CB9B /* Foodie */,
+				D0C93212190FF3FE0047CB9B /* FoodieTests */,
 			);
 		};
 /* End PBXProject section */
@@ -220,8 +273,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DFED1E193C4DAD00A6C951 /* AppIcon72x72@2x.png in Resources */,
+				D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */,
+				D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */,
+				D0DFED14193C4DAD00A6C951 /* AppIcon29x29@2x.png in Resources */,
+				D0DFED21193C4DAD00A6C951 /* launch.png in Resources */,
 				D0C93206190FF3FE0047CB9B /* InfoPlist.strings in Resources */,
+				D0DFED17193C4DAD00A6C951 /* AppIcon50x50.png in Resources */,
+				D0DFED18193C4DAD00A6C951 /* AppIcon50x50@2x.png in Resources */,
+				D0DFED1A193C4DAD00A6C951 /* AppIcon57x57@2x.png in Resources */,
+				D0DFED15193C4DAD00A6C951 /* AppIcon40x40.png in Resources */,
+				D0DFED1F193C4DAD00A6C951 /* AppIcon76x76.png in Resources */,
 				D0C9320E190FF3FE0047CB9B /* Images.xcassets in Resources */,
+				D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */,
+				D0DFED20193C4DAD00A6C951 /* AppIcon76x76@2x.png in Resources */,
+				D0DFED1C193C4DAD00A6C951 /* AppIcon60x60@2x.png in Resources */,
+				D0DFED1B193C4DAD00A6C951 /* AppIcon60x60.png in Resources */,
+				D0DFED1D193C4DAD00A6C951 /* AppIcon72x72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +326,7 @@
 /* Begin PBXTargetDependency section */
 		D0C93219190FF3FE0047CB9B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D0C931F7190FF3FE0047CB9B /* Licenta */;
+			target = D0C931F7190FF3FE0047CB9B /* Foodie */;
 			targetProxy = D0C93218190FF3FE0047CB9B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -356,12 +424,10 @@
 		D0C93225190FF3FE0047CB9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Licenta/Licenta-Prefix.pch";
-				INFOPLIST_FILE = "Licenta/Licenta-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Licenta/Foodie-Prefix.pch";
+				INFOPLIST_FILE = "Licenta/Foodie-Info.plist";
+				PRODUCT_NAME = Foodie;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -369,12 +435,10 @@
 		D0C93226190FF3FE0047CB9B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Licenta/Licenta-Prefix.pch";
-				INFOPLIST_FILE = "Licenta/Licenta-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Licenta/Foodie-Prefix.pch";
+				INFOPLIST_FILE = "Licenta/Foodie-Info.plist";
+				PRODUCT_NAME = Foodie;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -394,8 +458,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "LicentaTests/LicentaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "LicentaTests/FoodieTests-Info.plist";
+				PRODUCT_NAME = FoodieTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -412,8 +476,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Licenta/Licenta-Prefix.pch";
-				INFOPLIST_FILE = "LicentaTests/LicentaTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "LicentaTests/FoodieTests-Info.plist";
+				PRODUCT_NAME = FoodieTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -422,7 +486,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D0C931F3190FF3FE0047CB9B /* Build configuration list for PBXProject "Licenta" */ = {
+		D0C931F3190FF3FE0047CB9B /* Build configuration list for PBXProject "Foodie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0C93222190FF3FE0047CB9B /* Debug */,
@@ -431,21 +495,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D0C93224190FF3FE0047CB9B /* Build configuration list for PBXNativeTarget "Licenta" */ = {
+		D0C93224190FF3FE0047CB9B /* Build configuration list for PBXNativeTarget "Foodie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0C93225190FF3FE0047CB9B /* Debug */,
 				D0C93226190FF3FE0047CB9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		D0C93227190FF3FE0047CB9B /* Build configuration list for PBXNativeTarget "LicentaTests" */ = {
+		D0C93227190FF3FE0047CB9B /* Build configuration list for PBXNativeTarget "FoodieTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D0C93228190FF3FE0047CB9B /* Debug */,
 				D0C93229190FF3FE0047CB9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

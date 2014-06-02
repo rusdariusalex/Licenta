@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0C931F7190FF3FE0047CB9B"
                BuildableName = "Licenta.app"
-               BlueprintName = "Licenta"
-               ReferencedContainer = "container:Licenta.xcodeproj">
+               BlueprintName = "Foodie"
+               ReferencedContainer = "container:Foodie.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0C93212190FF3FE0047CB9B"
                BuildableName = "LicentaTests.xctest"
-               BlueprintName = "LicentaTests"
-               ReferencedContainer = "container:Licenta.xcodeproj">
+               BlueprintName = "FoodieTests"
+               ReferencedContainer = "container:Foodie.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C931F7190FF3FE0047CB9B"
             BuildableName = "Licenta.app"
-            BlueprintName = "Licenta"
-            ReferencedContainer = "container:Licenta.xcodeproj">
+            BlueprintName = "Foodie"
+            ReferencedContainer = "container:Foodie.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C931F7190FF3FE0047CB9B"
             BuildableName = "Licenta.app"
-            BlueprintName = "Licenta"
-            ReferencedContainer = "container:Licenta.xcodeproj">
+            BlueprintName = "Foodie"
+            ReferencedContainer = "container:Foodie.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0C931F7190FF3FE0047CB9B"
             BuildableName = "Licenta.app"
-            BlueprintName = "Licenta"
-            ReferencedContainer = "container:Licenta.xcodeproj">
+            BlueprintName = "Foodie"
+            ReferencedContainer = "container:Foodie.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
