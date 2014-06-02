@@ -34,6 +34,9 @@
 		D0DFED1F193C4DAD00A6C951 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED10193C4DAD00A6C951 /* AppIcon76x76.png */; };
 		D0DFED20193C4DAD00A6C951 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED11193C4DAD00A6C951 /* AppIcon76x76@2x.png */; };
 		D0DFED21193C4DAD00A6C951 /* launch.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED12193C4DAD00A6C951 /* launch.png */; };
+		D0DFED26193C4FA600A6C951 /* DARLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DFED24193C4FA600A6C951 /* DARLogInViewController.m */; };
+		D0DFED27193C4FA600A6C951 /* DARLogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED25193C4FA600A6C951 /* DARLogInViewController.xib */; };
+		D0DFED29193C517600A6C951 /* launch2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED28193C517600A6C951 /* launch2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,10 @@
 		D0DFED10193C4DAD00A6C951 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
 		D0DFED11193C4DAD00A6C951 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
 		D0DFED12193C4DAD00A6C951 /* launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch.png; sourceTree = "<group>"; };
+		D0DFED23193C4FA600A6C951 /* DARLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARLogInViewController.h; path = ViewControllers/DARLogInViewController.h; sourceTree = "<group>"; };
+		D0DFED24193C4FA600A6C951 /* DARLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARLogInViewController.m; path = ViewControllers/DARLogInViewController.m; sourceTree = "<group>"; };
+		D0DFED25193C4FA600A6C951 /* DARLogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARLogInViewController.xib; path = ViewControllers/DARLogInViewController.xib; sourceTree = "<group>"; };
+		D0DFED28193C517600A6C951 /* launch2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launch2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +147,7 @@
 				D0DFED03193C4DAD00A6C951 /* Resources */,
 				D0C9320A190FF3FE0047CB9B /* DARAppDelegate.h */,
 				D0C9320B190FF3FE0047CB9B /* DARAppDelegate.m */,
+				D0DFED22193C4F7C00A6C951 /* ViewControllers */,
 				D0C9320D190FF3FE0047CB9B /* Images.xcassets */,
 				D0C93202190FF3FE0047CB9B /* Supporting Files */,
 			);
@@ -178,6 +186,7 @@
 		D0DFED03193C4DAD00A6C951 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0DFED28193C517600A6C951 /* launch2.png */,
 				D0DFED04193C4DAD00A6C951 /* AppIcon29x29.png */,
 				D0DFED05193C4DAD00A6C951 /* AppIcon29x29@2x.png */,
 				D0DFED06193C4DAD00A6C951 /* AppIcon40x40.png */,
@@ -195,6 +204,16 @@
 				D0DFED12193C4DAD00A6C951 /* launch.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0DFED22193C4F7C00A6C951 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0DFED23193C4FA600A6C951 /* DARLogInViewController.h */,
+				D0DFED24193C4FA600A6C951 /* DARLogInViewController.m */,
+				D0DFED25193C4FA600A6C951 /* DARLogInViewController.xib */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DFED27193C4FA600A6C951 /* DARLogInViewController.xib in Resources */,
 				D0DFED1E193C4DAD00A6C951 /* AppIcon72x72@2x.png in Resources */,
 				D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */,
 				D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */,
@@ -285,6 +305,7 @@
 				D0DFED15193C4DAD00A6C951 /* AppIcon40x40.png in Resources */,
 				D0DFED1F193C4DAD00A6C951 /* AppIcon76x76.png in Resources */,
 				D0C9320E190FF3FE0047CB9B /* Images.xcassets in Resources */,
+				D0DFED29193C517600A6C951 /* launch2.png in Resources */,
 				D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */,
 				D0DFED20193C4DAD00A6C951 /* AppIcon76x76@2x.png in Resources */,
 				D0DFED1C193C4DAD00A6C951 /* AppIcon60x60@2x.png in Resources */,
@@ -309,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C9320C190FF3FE0047CB9B /* DARAppDelegate.m in Sources */,
+				D0DFED26193C4FA600A6C951 /* DARLogInViewController.m in Sources */,
 				D0C93208190FF3FE0047CB9B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

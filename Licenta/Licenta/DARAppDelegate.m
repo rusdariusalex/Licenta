@@ -7,6 +7,7 @@
 //
 
 #import "DARAppDelegate.h"
+#import "DARLogInViewController.h"
 
 @implementation DARAppDelegate
 
@@ -14,7 +15,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    DARLogInViewController *loginViewController = [[DARLogInViewController alloc] init];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    self.window.rootViewController = self.navController;
+    self.navController.navigationBarHidden = YES;
+
     [self.window makeKeyAndVisible];
     return YES;
 }
