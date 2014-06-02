@@ -8,6 +8,8 @@
 
 #import "DARLogInViewController.h"
 #import "POP.h"
+#import <Parse/Parse.h>
+
 
 
 @interface DARLogInViewController (){
@@ -58,6 +60,7 @@
     self.signUpView.layer.masksToBounds = YES;
     self.signInView.layer.cornerRadius = 20;
     self.signUpView.layer.cornerRadius = 20;
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -137,7 +140,11 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.greyView.alpha = 0.0;
     }];
-
+    
+    self.signInAlertLabel.text = @"";
+    self.signInAlertLabel.alpha = 0.0;
+    self.signUpAlertLabel.text = @"";
+    self.signUpAlertLabel.alpha = 0.0;
 }
 
 - (IBAction)hideSignUp:(id)sender {
@@ -155,14 +162,33 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.greyView.alpha = 0.0;
     }];
+    
+    self.signUpAlertLabel.text = @"";
+    self.signUpAlertLabel.alpha = 0.0;
+    self.signInAlertLabel.text = @"";
+    self.signInAlertLabel.alpha = 0.0;
 }
 
 - (IBAction)doSignUp:(id)sender {
     [self.view endEditing:YES];
+    
+    if ([self.signUpNameTextField.text isEqualToString:@""] || [self.signUpEmailTextField.text isEqualToString:@""] || [self.signUpPasswordTextField.text isEqualToString:@""]) {
+        self.signUpAlertLabel.text = @"Please complete all fields!";
+        self.signUpAlertLabel.alpha = 1.0;
+    }else{
+        
+    }
 }
 
 - (IBAction)doSignIn:(id)sender {
     [self.view endEditing:YES];
+    
+    if ([self.signInEmailTextField.text isEqualToString:@""] || [self.signInPasswordTextField.text isEqualToString:@""]) {
+        self.signInAlertLabel.text = @"Please complete all fields!";
+        self.signInAlertLabel.alpha = 1.0;
+    }else{
+        
+    }
 }
 
 
@@ -187,6 +213,13 @@
     [textField resignFirstResponder];
     
     return YES;
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    self.signUpAlertLabel.text = @"";
+    self.signUpAlertLabel.alpha = 0.0;
+    self.signInAlertLabel.text = @"";
+    self.signInAlertLabel.alpha = 0.0;
 }
 
 - (void)dismissKeyboard:(UIGestureRecognizer *)gestureRecognizer{

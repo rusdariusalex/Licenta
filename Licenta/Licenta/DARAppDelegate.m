@@ -8,6 +8,7 @@
 
 #import "DARAppDelegate.h"
 #import "DARLogInViewController.h"
+#import <Parse/Parse.h>
 
 @implementation DARAppDelegate
 
@@ -19,9 +20,30 @@
     self.navController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
     self.window.rootViewController = self.navController;
     self.navController.navigationBarHidden = YES;
+    
+    [Parse setApplicationId:@"XKWpaMRVmIb9hQcAUNe5auR2k4EYwXxHu4BrC8SK"
+                  clientKey:@"HEt4JeC5VoDBf9eytznCrwUt4PFYtabOh4XYfU7J"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
 
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

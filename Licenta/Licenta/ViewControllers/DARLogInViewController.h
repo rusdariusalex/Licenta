@@ -21,9 +21,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *signUpNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *signUpEmailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *signUpPasswordTextField;
+@property (weak, nonatomic) IBOutlet UILabel *signUpAlertLabel;
 
 @property (weak, nonatomic) IBOutlet UITextField *signInEmailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *signInPasswordTextField;
+@property (weak, nonatomic) IBOutlet UILabel *signInAlertLabel;
 
 
 
