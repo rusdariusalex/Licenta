@@ -9,6 +9,8 @@
 #import "DARLogInViewController.h"
 #import "POP.h"
 #import <Parse/Parse.h>
+#import "DARUser.h"
+#import "DARMainViewController.h"
 
 
 
@@ -176,7 +178,44 @@
         self.signUpAlertLabel.text = @"Please complete all fields!";
         self.signUpAlertLabel.alpha = 1.0;
     }else{
-        
+        if ([self NSStringIsValidEmail:self.signUpEmailTextField.text]) {
+            PFQuery *query = [PFQuery queryWithClassName:@"User"];
+            [query whereKey:@"email" equalTo:self.signUpEmailTextField.text];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error) {
+                    // The find succeeded.
+                    NSLog(@"Successfully retrieved %d user.", objects.count);
+                    
+                    if (!objects.count) {
+                        DARUser *user = [DARUser sharedInstance];
+                        [user addUser:self.signUpNameTextField.text
+                                email:self.signUpEmailTextField.text
+                             password:self.signUpPasswordTextField.text
+                              address:@"" role:@"user"];
+                        
+                        [user setUser:self.signUpNameTextField.text
+                                email:self.signUpEmailTextField.text
+                             password:self.signUpPasswordTextField.text
+                              address:@"" role:@"user"];
+                        
+                        DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
+                        
+                        [self.navigationController pushViewController:mainViewController animated:YES];
+                    }else{
+                        self.signUpAlertLabel.text = @"An user with this email already exists";
+                        self.signUpAlertLabel.alpha = 1.0;
+                    }
+                    
+                } else {
+                    // Log details of the failure
+                    NSLog(@"Error: %@ %@", error, [error userInfo]);
+                }
+            }];
+        }else{
+            self.signUpAlertLabel.text = @"Please enter valid email address!";
+            self.signUpAlertLabel.alpha = 1.0;
+        }
+
     }
 }
 
@@ -187,8 +226,59 @@
         self.signInAlertLabel.text = @"Please complete all fields!";
         self.signInAlertLabel.alpha = 1.0;
     }else{
-        
+        if ([self NSStringIsValidEmail:self.signInEmailTextField.text]) {
+            PFQuery *query = [PFQuery queryWithClassName:@"User"];
+            [query whereKey:@"email" equalTo:self.signInEmailTextField.text];
+            [query whereKey:@"password" equalTo:self.signInPasswordTextField.text];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error) {
+                    
+                    if (objects.count) {
+                        PFObject *object = [objects firstObject];
+                        
+                        if ([[object objectForKey:@"role"] isEqualToString:@"user"]) {
+                            DARUser *user = [DARUser sharedInstance];
+                            [user setUser:[object objectForKey:@"name"]
+                                    email:[object objectForKey:@"email"]
+                                 password:[object objectForKey:@"password"]
+                                  address:[object objectForKey:@"address"]
+                                     role:[object objectForKey:@"role"]];
+                            
+                            DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
+                            
+                            [self.navigationController pushViewController:mainViewController animated:YES];
+                        }
+                        
+                        
+                    }else{
+                        self.signInAlertLabel.text = @"Wrong email or password!";
+                        self.signInAlertLabel.alpha = 1.0;
+                    }
+                    
+                    for (PFObject *object in objects) {
+                        NSLog(@"%@", object.objectId);
+                    }
+                    
+                } else {
+                    // Log details of the failure
+                    NSLog(@"Error: %@ %@", error, [error userInfo]);
+                }
+            }];
+        }else{
+            self.signInAlertLabel.text = @"Please enter valid email address!";
+            self.signInAlertLabel.alpha = 1.0;
+        }
     }
+}
+
+-(BOOL) NSStringIsValidEmail:(NSString *)checkString
+{
+    BOOL stricterFilter = YES;
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
 }
 
 
