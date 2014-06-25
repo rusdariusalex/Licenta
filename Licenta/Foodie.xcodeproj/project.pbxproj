@@ -12,6 +12,24 @@
 		D04042DF193F1699002F9BFB /* DARUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D04042DE193F1699002F9BFB /* DARUser.m */; };
 		D04042E3193F1DE5002F9BFB /* DARMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04042E1193F1DE5002F9BFB /* DARMainViewController.m */; };
 		D04042E4193F1DE5002F9BFB /* DARMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04042E2193F1DE5002F9BFB /* DARMainViewController.xib */; };
+		D05F4AD6195ACF51007B1A6D /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AD3195ACF51007B1A6D /* OpenSans-Light.ttf */; };
+		D05F4AD7195ACF51007B1A6D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AD4195ACF51007B1A6D /* OpenSans-Regular.ttf */; };
+		D05F4AD8195ACF51007B1A6D /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AD5195ACF51007B1A6D /* OpenSans-Semibold.ttf */; };
+		D05F4ADC195AD11A007B1A6D /* UIFont+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F4ADB195AD11A007B1A6D /* UIFont+Additions.m */; };
+		D05F4ADE195AD484007B1A6D /* icon_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = D05F4ADD195AD484007B1A6D /* icon_photo.png */; };
+		D05F4AE0195AD596007B1A6D /* icon_settings_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D05F4ADF195AD596007B1A6D /* icon_settings_white.png */; };
+		D05F4AE2195AD689007B1A6D /* icon_cart_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AE1195AD689007B1A6D /* icon_cart_white.png */; };
+		D05F4AE4195AD6FD007B1A6D /* vertical.png in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AE3195AD6FD007B1A6D /* vertical.png */; };
+		D05F4AE6195ADA06007B1A6D /* darius.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AE5195ADA06007B1A6D /* darius.jpg */; };
+		D05F4AE8195ADC22007B1A6D /* darius2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AE7195ADC22007B1A6D /* darius2.jpg */; };
+		D05F4AEA195ADE5E007B1A6D /* icon_cart-empty_up.png in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AE9195ADE5E007B1A6D /* icon_cart-empty_up.png */; };
+		D05F4AEC195AE0C1007B1A6D /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AEB195AE0C1007B1A6D /* plus.png */; };
+		D05F4AF2195AEBC9007B1A6D /* DARAccountSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F4AF0195AEBC9007B1A6D /* DARAccountSettingsViewController.m */; };
+		D05F4AF3195AEBC9007B1A6D /* DARAccountSettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AF1195AEBC9007B1A6D /* DARAccountSettingsViewController.xib */; };
+		D05F4AF8195AEBEB007B1A6D /* DARFinishOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F4AF6195AEBEB007B1A6D /* DARFinishOrderViewController.m */; };
+		D05F4AF9195AEBEB007B1A6D /* DARFinishOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AF7195AEBEB007B1A6D /* DARFinishOrderViewController.xib */; };
+		D05F4AFE195AEC0E007B1A6D /* DARAddItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F4AFC195AEC0E007B1A6D /* DARAddItemsViewController.m */; };
+		D05F4AFF195AEC0E007B1A6D /* DARAddItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AFD195AEC0E007B1A6D /* DARAddItemsViewController.xib */; };
 		D0C931FC190FF3FE0047CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FB190FF3FE0047CB9B /* Foundation.framework */; };
 		D0C931FE190FF3FE0047CB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */; };
 		D0C93200190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
@@ -24,6 +42,8 @@
 		D0C93217190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
 		D0C9321F190FF3FE0047CB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0C9321D190FF3FE0047CB9B /* InfoPlist.strings */; };
 		D0C93221190FF3FE0047CB9B /* LicentaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C93220190FF3FE0047CB9B /* LicentaTests.m */; };
+		D0CDE46E195AC7B300848635 /* DARWaiterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDE46C195AC7B300848635 /* DARWaiterViewController.m */; };
+		D0CDE46F195AC7B300848635 /* DARWaiterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CDE46D195AC7B300848635 /* DARWaiterViewController.xib */; };
 		D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED04193C4DAD00A6C951 /* AppIcon29x29.png */; };
 		D0DFED14193C4DAD00A6C951 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED05193C4DAD00A6C951 /* AppIcon29x29@2x.png */; };
 		D0DFED15193C4DAD00A6C951 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED06193C4DAD00A6C951 /* AppIcon40x40.png */; };
@@ -94,6 +114,28 @@
 		D04042E0193F1DE5002F9BFB /* DARMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARMainViewController.h; path = ViewControllers/DARMainViewController.h; sourceTree = "<group>"; };
 		D04042E1193F1DE5002F9BFB /* DARMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARMainViewController.m; path = ViewControllers/DARMainViewController.m; sourceTree = "<group>"; };
 		D04042E2193F1DE5002F9BFB /* DARMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARMainViewController.xib; path = ViewControllers/DARMainViewController.xib; sourceTree = "<group>"; };
+		D05F4AD3195ACF51007B1A6D /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		D05F4AD4195ACF51007B1A6D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D05F4AD5195ACF51007B1A6D /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		D05F4ADA195AD11A007B1A6D /* UIFont+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Additions.h"; sourceTree = "<group>"; };
+		D05F4ADB195AD11A007B1A6D /* UIFont+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Additions.m"; sourceTree = "<group>"; };
+		D05F4ADD195AD484007B1A6D /* icon_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_photo.png; sourceTree = "<group>"; };
+		D05F4ADF195AD596007B1A6D /* icon_settings_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_settings_white.png; sourceTree = "<group>"; };
+		D05F4AE1195AD689007B1A6D /* icon_cart_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_cart_white.png; sourceTree = "<group>"; };
+		D05F4AE3195AD6FD007B1A6D /* vertical.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vertical.png; sourceTree = "<group>"; };
+		D05F4AE5195ADA06007B1A6D /* darius.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darius.jpg; sourceTree = "<group>"; };
+		D05F4AE7195ADC22007B1A6D /* darius2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = darius2.jpg; sourceTree = "<group>"; };
+		D05F4AE9195ADE5E007B1A6D /* icon_cart-empty_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_cart-empty_up.png"; sourceTree = "<group>"; };
+		D05F4AEB195AE0C1007B1A6D /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		D05F4AEF195AEBC9007B1A6D /* DARAccountSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARAccountSettingsViewController.h; sourceTree = "<group>"; };
+		D05F4AF0195AEBC9007B1A6D /* DARAccountSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARAccountSettingsViewController.m; sourceTree = "<group>"; };
+		D05F4AF1195AEBC9007B1A6D /* DARAccountSettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARAccountSettingsViewController.xib; sourceTree = "<group>"; };
+		D05F4AF5195AEBEB007B1A6D /* DARFinishOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARFinishOrderViewController.h; sourceTree = "<group>"; };
+		D05F4AF6195AEBEB007B1A6D /* DARFinishOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARFinishOrderViewController.m; sourceTree = "<group>"; };
+		D05F4AF7195AEBEB007B1A6D /* DARFinishOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARFinishOrderViewController.xib; sourceTree = "<group>"; };
+		D05F4AFB195AEC0E007B1A6D /* DARAddItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARAddItemsViewController.h; sourceTree = "<group>"; };
+		D05F4AFC195AEC0E007B1A6D /* DARAddItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARAddItemsViewController.m; sourceTree = "<group>"; };
+		D05F4AFD195AEC0E007B1A6D /* DARAddItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARAddItemsViewController.xib; sourceTree = "<group>"; };
 		D0C931F8190FF3FE0047CB9B /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C931FB190FF3FE0047CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -110,6 +152,9 @@
 		D0C9321C190FF3FE0047CB9B /* FoodieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoodieTests-Info.plist"; sourceTree = "<group>"; };
 		D0C9321E190FF3FE0047CB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D0C93220190FF3FE0047CB9B /* LicentaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LicentaTests.m; sourceTree = "<group>"; };
+		D0CDE46B195AC7B300848635 /* DARWaiterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARWaiterViewController.h; path = ViewControllers/DARWaiterViewController.h; sourceTree = "<group>"; };
+		D0CDE46C195AC7B300848635 /* DARWaiterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARWaiterViewController.m; path = ViewControllers/DARWaiterViewController.m; sourceTree = "<group>"; };
+		D0CDE46D195AC7B300848635 /* DARWaiterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARWaiterViewController.xib; path = ViewControllers/DARWaiterViewController.xib; sourceTree = "<group>"; };
 		D0DFED04193C4DAD00A6C951 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		D0DFED05193C4DAD00A6C951 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		D0DFED06193C4DAD00A6C951 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
@@ -240,6 +285,55 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		D05F4AD2195ACF51007B1A6D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D05F4AD3195ACF51007B1A6D /* OpenSans-Light.ttf */,
+				D05F4AD4195ACF51007B1A6D /* OpenSans-Regular.ttf */,
+				D05F4AD5195ACF51007B1A6D /* OpenSans-Semibold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D05F4AD9195AD11A007B1A6D /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				D05F4ADA195AD11A007B1A6D /* UIFont+Additions.h */,
+				D05F4ADB195AD11A007B1A6D /* UIFont+Additions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		D05F4AED195AEB9B007B1A6D /* AccountSettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D05F4AEF195AEBC9007B1A6D /* DARAccountSettingsViewController.h */,
+				D05F4AF0195AEBC9007B1A6D /* DARAccountSettingsViewController.m */,
+				D05F4AF1195AEBC9007B1A6D /* DARAccountSettingsViewController.xib */,
+			);
+			name = AccountSettingsViewController;
+			sourceTree = "<group>";
+		};
+		D05F4AF4195AEBD1007B1A6D /* FinishOrderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D05F4AF5195AEBEB007B1A6D /* DARFinishOrderViewController.h */,
+				D05F4AF6195AEBEB007B1A6D /* DARFinishOrderViewController.m */,
+				D05F4AF7195AEBEB007B1A6D /* DARFinishOrderViewController.xib */,
+			);
+			name = FinishOrderViewController;
+			sourceTree = "<group>";
+		};
+		D05F4AFA195AEBF2007B1A6D /* AddItemsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D05F4AFB195AEC0E007B1A6D /* DARAddItemsViewController.h */,
+				D05F4AFC195AEC0E007B1A6D /* DARAddItemsViewController.m */,
+				D05F4AFD195AEC0E007B1A6D /* DARAddItemsViewController.xib */,
+			);
+			name = AddItemsViewController;
+			sourceTree = "<group>";
+		};
 		D0C931EF190FF3FE0047CB9B = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +376,7 @@
 		D0C93201190FF3FE0047CB9B /* Licenta */ = {
 			isa = PBXGroup;
 			children = (
+				D05F4AD9195AD11A007B1A6D /* Additions */,
 				D0DFED2C193C633A00A6C951 /* Libraries */,
 				D0DFED03193C4DAD00A6C951 /* Resources */,
 				D0C9320A190FF3FE0047CB9B /* DARAppDelegate.h */,
@@ -323,9 +418,48 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D0CDE468195AC60E00848635 /* LogInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0DFED23193C4FA600A6C951 /* DARLogInViewController.h */,
+				D0DFED24193C4FA600A6C951 /* DARLogInViewController.m */,
+				D0DFED25193C4FA600A6C951 /* DARLogInViewController.xib */,
+			);
+			name = LogInViewController;
+			sourceTree = "<group>";
+		};
+		D0CDE469195AC64100848635 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D04042E0193F1DE5002F9BFB /* DARMainViewController.h */,
+				D04042E1193F1DE5002F9BFB /* DARMainViewController.m */,
+				D04042E2193F1DE5002F9BFB /* DARMainViewController.xib */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		D0CDE46A195AC76800848635 /* WaiterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0CDE46B195AC7B300848635 /* DARWaiterViewController.h */,
+				D0CDE46C195AC7B300848635 /* DARWaiterViewController.m */,
+				D0CDE46D195AC7B300848635 /* DARWaiterViewController.xib */,
+			);
+			name = WaiterViewController;
+			sourceTree = "<group>";
+		};
 		D0DFED03193C4DAD00A6C951 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D05F4AEB195AE0C1007B1A6D /* plus.png */,
+				D05F4AE9195ADE5E007B1A6D /* icon_cart-empty_up.png */,
+				D05F4AE5195ADA06007B1A6D /* darius.jpg */,
+				D05F4AE7195ADC22007B1A6D /* darius2.jpg */,
+				D05F4AE3195AD6FD007B1A6D /* vertical.png */,
+				D05F4AE1195AD689007B1A6D /* icon_cart_white.png */,
+				D05F4ADF195AD596007B1A6D /* icon_settings_white.png */,
+				D05F4AD2195ACF51007B1A6D /* Fonts */,
+				D05F4ADD195AD484007B1A6D /* icon_photo.png */,
 				D00BEAC0193C75B500BF4335 /* textfield_background.png */,
 				D00BEAC1193C75B500BF4335 /* textfieldImage.png */,
 				D0DFEDC7193C6A7200A6C951 /* icon_x_over.png */,
@@ -353,12 +487,12 @@
 		D0DFED22193C4F7C00A6C951 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0DFED23193C4FA600A6C951 /* DARLogInViewController.h */,
-				D0DFED24193C4FA600A6C951 /* DARLogInViewController.m */,
-				D0DFED25193C4FA600A6C951 /* DARLogInViewController.xib */,
-				D04042E0193F1DE5002F9BFB /* DARMainViewController.h */,
-				D04042E1193F1DE5002F9BFB /* DARMainViewController.m */,
-				D04042E2193F1DE5002F9BFB /* DARMainViewController.xib */,
+				D05F4AFA195AEBF2007B1A6D /* AddItemsViewController */,
+				D05F4AF4195AEBD1007B1A6D /* FinishOrderViewController */,
+				D05F4AED195AEB9B007B1A6D /* AccountSettingsViewController */,
+				D0CDE46A195AC76800848635 /* WaiterViewController */,
+				D0CDE469195AC64100848635 /* MainViewController */,
+				D0CDE468195AC60E00848635 /* LogInViewController */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -518,31 +652,46 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05F4AFF195AEC0E007B1A6D /* DARAddItemsViewController.xib in Resources */,
+				D05F4AE8195ADC22007B1A6D /* darius2.jpg in Resources */,
 				D0DFED27193C4FA600A6C951 /* DARLogInViewController.xib in Resources */,
 				D0DFEDB3193C644300A6C951 /* InfoPlist.strings in Resources */,
+				D05F4AD6195ACF51007B1A6D /* OpenSans-Light.ttf in Resources */,
+				D05F4AD7195ACF51007B1A6D /* OpenSans-Regular.ttf in Resources */,
 				D00BEAC3193C75B500BF4335 /* textfieldImage.png in Resources */,
 				D0DFED1E193C4DAD00A6C951 /* AppIcon72x72@2x.png in Resources */,
 				D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */,
+				D05F4AF9195AEBEB007B1A6D /* DARFinishOrderViewController.xib in Resources */,
 				D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */,
 				D0DFED14193C4DAD00A6C951 /* AppIcon29x29@2x.png in Resources */,
 				D0DFED21193C4DAD00A6C951 /* launch.png in Resources */,
 				D0C93206190FF3FE0047CB9B /* InfoPlist.strings in Resources */,
 				D0DFED17193C4DAD00A6C951 /* AppIcon50x50.png in Resources */,
 				D0DFED18193C4DAD00A6C951 /* AppIcon50x50@2x.png in Resources */,
+				D05F4ADE195AD484007B1A6D /* icon_photo.png in Resources */,
+				D05F4AE4195AD6FD007B1A6D /* vertical.png in Resources */,
+				D05F4AF3195AEBC9007B1A6D /* DARAccountSettingsViewController.xib in Resources */,
 				D0DFED1A193C4DAD00A6C951 /* AppIcon57x57@2x.png in Resources */,
 				D0DFED15193C4DAD00A6C951 /* AppIcon40x40.png in Resources */,
+				D05F4AE0195AD596007B1A6D /* icon_settings_white.png in Resources */,
 				D0DFEDB4193C644300A6C951 /* pop-Info.plist in Resources */,
+				D05F4AE2195AD689007B1A6D /* icon_cart_white.png in Resources */,
 				D0DFED1F193C4DAD00A6C951 /* AppIcon76x76.png in Resources */,
 				D0DFEDC8193C6A7200A6C951 /* icon_x_over.png in Resources */,
 				D0C9320E190FF3FE0047CB9B /* Images.xcassets in Resources */,
 				D04042E4193F1DE5002F9BFB /* DARMainViewController.xib in Resources */,
 				D0DFED29193C517600A6C951 /* launch2.png in Resources */,
+				D0CDE46F195AC7B300848635 /* DARWaiterViewController.xib in Resources */,
 				D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */,
 				D0DFED20193C4DAD00A6C951 /* AppIcon76x76@2x.png in Resources */,
+				D05F4AD8195ACF51007B1A6D /* OpenSans-Semibold.ttf in Resources */,
 				D00BEAC2193C75B500BF4335 /* textfield_background.png in Resources */,
+				D05F4AEC195AE0C1007B1A6D /* plus.png in Resources */,
 				D0DFED2B193C52E700A6C951 /* logo.png in Resources */,
 				D0DFED1C193C4DAD00A6C951 /* AppIcon60x60@2x.png in Resources */,
+				D05F4AEA195ADE5E007B1A6D /* icon_cart-empty_up.png in Resources */,
 				D0DFED1B193C4DAD00A6C951 /* AppIcon60x60.png in Resources */,
+				D05F4AE6195ADA06007B1A6D /* darius.jpg in Resources */,
 				D0DFED1D193C4DAD00A6C951 /* AppIcon72x72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,6 +713,7 @@
 			files = (
 				D0C9320C190FF3FE0047CB9B /* DARAppDelegate.m in Sources */,
 				D0DFEDB9193C644300A6C951 /* POPAnimationRuntime.mm in Sources */,
+				D05F4ADC195AD11A007B1A6D /* UIFont+Additions.m in Sources */,
 				D0DFEDC5193C644300A6C951 /* POPVector.mm in Sources */,
 				D04042E3193F1DE5002F9BFB /* DARMainViewController.m in Sources */,
 				D0DFEDB6193C644300A6C951 /* POPAnimation.mm in Sources */,
@@ -571,6 +721,7 @@
 				D0DFED26193C4FA600A6C951 /* DARLogInViewController.m in Sources */,
 				D0DFEDC0193C644300A6C951 /* POPGeometry.mm in Sources */,
 				D0DFEDC6193C644300A6C951 /* TransformationMatrix.cpp in Sources */,
+				D05F4AF8195AEBEB007B1A6D /* DARFinishOrderViewController.m in Sources */,
 				D0DFEDB8193C644300A6C951 /* POPAnimationExtras.mm in Sources */,
 				D0DFEDB7193C644300A6C951 /* POPAnimationEvent.mm in Sources */,
 				D0DFEDB5193C644300A6C951 /* POPAnimatableProperty.mm in Sources */,
@@ -584,7 +735,10 @@
 				D0C93208190FF3FE0047CB9B /* main.m in Sources */,
 				D0DFEDBD193C644300A6C951 /* POPCGUtils.mm in Sources */,
 				D0DFEDC2193C644300A6C951 /* POPMath.mm in Sources */,
+				D05F4AF2195AEBC9007B1A6D /* DARAccountSettingsViewController.m in Sources */,
+				D0CDE46E195AC7B300848635 /* DARWaiterViewController.m in Sources */,
 				D0DFEDBE193C644300A6C951 /* POPCustomAnimation.mm in Sources */,
+				D05F4AFE195AEC0E007B1A6D /* DARAddItemsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

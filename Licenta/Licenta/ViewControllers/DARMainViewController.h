@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface DARMainViewController : UIViewController
+@interface DARMainViewController : UIViewController<CLLocationManagerDelegate>
+
+@property (strong, nonatomic) CLBeaconRegion *myBeaconRegion;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
+@property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *restaurantLabel;
+@property (weak, nonatomic) IBOutlet UILabel *homeLabel;
+
+- (IBAction)finishOrder:(id)sender;
+- (IBAction)addItems:(id)sender;
+- (IBAction)accountSettings:(id)sender;
+
+
 
 @end

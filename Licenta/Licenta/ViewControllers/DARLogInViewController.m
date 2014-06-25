@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import "DARUser.h"
 #import "DARMainViewController.h"
+#import "DARWaiterViewController.h"
 
 
 
@@ -54,6 +55,8 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
     
     self.signInView.frame = CGRectMake(self.signInView.frame.origin.x, 568, self.signInView.frame.size.width, self.signInView.frame.size.height);
     self.signUpView.frame = CGRectMake(self.signUpView.frame.origin.x, 568, self.signUpView.frame.size.width, self.signUpView.frame.size.height);
@@ -183,9 +186,6 @@
             [query whereKey:@"email" equalTo:self.signUpEmailTextField.text];
             [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
                 if (!error) {
-                    // The find succeeded.
-                    NSLog(@"Successfully retrieved %d user.", objects.count);
-                    
                     if (!objects.count) {
                         DARUser *user = [DARUser sharedInstance];
                         [user addUser:self.signUpNameTextField.text
@@ -197,6 +197,10 @@
                                 email:self.signUpEmailTextField.text
                              password:self.signUpPasswordTextField.text
                               address:@"" role:@"user"];
+                        
+                        self.greyView.alpha = 0.0;
+                        self.showSignInButton.alpha = 0.0;
+                        self.showSignUpButton.alpha = 0.0;
                         
                         DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
                         
@@ -243,6 +247,26 @@
                                  password:[object objectForKey:@"password"]
                                   address:[object objectForKey:@"address"]
                                      role:[object objectForKey:@"role"]];
+                            
+                            self.greyView.alpha = 0.0;
+                            self.showSignInButton.alpha = 0.0;
+                            self.showSignUpButton.alpha = 0.0;
+                            
+                            
+                            DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
+                            
+                            [self.navigationController pushViewController:mainViewController animated:YES];
+                        }else if ([[object objectForKey:@"role"] isEqualToString:@"waiter"]){
+                            DARUser *user = [DARUser sharedInstance];
+                            [user setUser:[object objectForKey:@"name"]
+                                    email:[object objectForKey:@"email"]
+                                 password:[object objectForKey:@"password"]
+                                  address:[object objectForKey:@"address"]
+                                     role:[object objectForKey:@"role"]];
+                            
+                            self.greyView.alpha = 0.0;
+                            self.showSignInButton.alpha = 0.0;
+                            self.showSignUpButton.alpha = 0.0;
                             
                             DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
                             
