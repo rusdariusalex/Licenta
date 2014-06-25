@@ -12,6 +12,7 @@
 #import "DARFinishOrderViewController.h"
 #import "DARAddItemsViewController.h"
 #import "DARAccountSettingsViewController.h"
+#import <Parse/Parse.h>
 
 @interface DARMainViewController ()
 
@@ -44,15 +45,14 @@
     
     // Tell location manager to start monitoring for the beacon region
     [self.locationManager startMonitoringForRegion:self.myBeaconRegion];
-    
-    DARUser *user = [DARUser sharedInstance];
-    NSLog(@"%@",user.name);
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     self.welcomeLabel.font = [UIFont openSansSemiBoldWithSize:50];
     self.homeLabel.font = [UIFont openSansRegularWithSize:20];
+    self.restaurantLabel.font = [UIFont openSansRegularWithSize:20];
     self.navigationController.navigationBarHidden = YES;
+    self.restaurantView.alpha = 0.0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,17 +85,70 @@
 {
     if ([beacons count] > 0) {
         for (CLBeacon *beacon in beacons) {
-            if (beacon.proximity == CLProximityUnknown) {
+            if (beacon.proximity == CLProximityImmediate) {
                 
-            } else if (beacon.proximity == CLProximityImmediate) {
+                self.activeBeacon = beacon;
                 
-            } else if (beacon.proximity == CLProximityNear) {
+                self.table = [DARTable sharedInstance];
+                if (![self.table.major isEqual:beacon.major]) {
+                    
+                    PFQuery *query = [PFQuery queryWithClassName:@"Table"];
+                    [query whereKey:@"major" equalTo:beacon.major];
+                    [query whereKey:@"minor" equalTo:beacon.minor];
+                    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                        if (!error) {
+                            
+                            PFObject *object = [objects firstObject];
+                            
+                            self.table.restaurantName = [object objectForKey:@"restaurantName"];
+                            self.table.tableNo = [object objectForKey:@"tableNo"];
+                            self.table.major = [object objectForKey:@"major"];
+                            self.table.minor = [object objectForKey:@"minor"];
+                            
+                            [self showAtRestaurantView];
+                        }
+                    }];
+
+                }
+            }else if (beacon.major == self.activeBeacon.major && beacon.proximity != CLProximityNear){
+                [self.table resetInfo];
+                self.activeBeacon = nil;
                 
-            } else if (beacon.proximity == CLProximityFar) {
-                
+                [self showAtHomeView];
             }
         }
     }
+}
+
+- (void)showAtRestaurantView{
+    self.restaurantLabel.text = [NSString stringWithFormat:@"You are at %@",self.table.restaurantName];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.homeLabel.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.homeView.alpha = 0.0;
+            self.restaurantView.alpha = 1.0;
+            self.restaurantLabel.alpha = 1.0;
+        }];
+    }];
+}
+
+- (void)showAtHomeView{
+    self.restaurantLabel.text = @"";
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.restaurantLabel.alpha = 0.0;
+        
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.restaurantView.alpha = 0.0;
+            self.homeView.alpha = 1.0;
+            self.homeLabel.alpha = 1.0;
+            
+        }];
+    }];
 }
 
 - (IBAction)finishOrder:(id)sender {

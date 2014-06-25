@@ -30,6 +30,7 @@
 		D05F4AF9195AEBEB007B1A6D /* DARFinishOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AF7195AEBEB007B1A6D /* DARFinishOrderViewController.xib */; };
 		D05F4AFE195AEC0E007B1A6D /* DARAddItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F4AFC195AEC0E007B1A6D /* DARAddItemsViewController.m */; };
 		D05F4AFF195AEC0E007B1A6D /* DARAddItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AFD195AEC0E007B1A6D /* DARAddItemsViewController.xib */; };
+		D05F4B02195AF925007B1A6D /* DARTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F4B01195AF925007B1A6D /* DARTable.m */; };
 		D0C931FC190FF3FE0047CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FB190FF3FE0047CB9B /* Foundation.framework */; };
 		D0C931FE190FF3FE0047CB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */; };
 		D0C93200190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
@@ -136,6 +137,8 @@
 		D05F4AFB195AEC0E007B1A6D /* DARAddItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARAddItemsViewController.h; sourceTree = "<group>"; };
 		D05F4AFC195AEC0E007B1A6D /* DARAddItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARAddItemsViewController.m; sourceTree = "<group>"; };
 		D05F4AFD195AEC0E007B1A6D /* DARAddItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARAddItemsViewController.xib; sourceTree = "<group>"; };
+		D05F4B00195AF925007B1A6D /* DARTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARTable.h; path = Model/DARTable.h; sourceTree = "<group>"; };
+		D05F4B01195AF925007B1A6D /* DARTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARTable.m; path = Model/DARTable.m; sourceTree = "<group>"; };
 		D0C931F8190FF3FE0047CB9B /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C931FB190FF3FE0047CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -281,6 +284,8 @@
 			children = (
 				D04042DD193F1699002F9BFB /* DARUser.h */,
 				D04042DE193F1699002F9BFB /* DARUser.m */,
+				D05F4B00195AF925007B1A6D /* DARTable.h */,
+				D05F4B01195AF925007B1A6D /* DARTable.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 				D0C93208190FF3FE0047CB9B /* main.m in Sources */,
 				D0DFEDBD193C644300A6C951 /* POPCGUtils.mm in Sources */,
 				D0DFEDC2193C644300A6C951 /* POPMath.mm in Sources */,
+				D05F4B02195AF925007B1A6D /* DARTable.m in Sources */,
 				D05F4AF2195AEBC9007B1A6D /* DARAccountSettingsViewController.m in Sources */,
 				D0CDE46E195AC7B300848635 /* DARWaiterViewController.m in Sources */,
 				D0DFEDBE193C644300A6C951 /* POPCustomAnimation.mm in Sources */,

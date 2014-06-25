@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "DARTable.h"
 
 @interface DARMainViewController : UIViewController<CLLocationManagerDelegate>
 
@@ -17,6 +18,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantLabel;
 @property (weak, nonatomic) IBOutlet UILabel *homeLabel;
+@property (weak, nonatomic) IBOutlet UIView *restaurantView;
+@property (weak, nonatomic) IBOutlet UIView *homeView;
+
+@property (strong, nonatomic) DARTable *table;
+@property (strong, nonatomic) CLBeacon *activeBeacon;
 
 - (IBAction)finishOrder:(id)sender;
 - (IBAction)addItems:(id)sender;
