@@ -7,8 +7,13 @@
 //
 
 #import "DARAccountSettingsViewController.h"
+#import "DARMainViewController.h"
+#import "DARUser.h"
+#import "UIFont+Additions.h"
 
-@interface DARAccountSettingsViewController ()
+@interface DARAccountSettingsViewController (){
+    DARUser *user;
+}
 
 @end
 
@@ -27,12 +32,38 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    user = [DARUser sharedInstance];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.emailLabel.text = user.email;
+    self.emailLabel.font = [UIFont openSansRegularWithSize:20];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)backButtonPressed:(id)sender {
+    
+    for (id viewController in [self.navigationController viewControllers]){
+        if ([viewController isKindOfClass:[DARMainViewController class]])
+        {
+            [self.navigationController popToViewController:viewController animated:YES];
+            break;
+        }
+    }
+}
+
+- (IBAction)logOut:(id)sender {
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

@@ -10,4 +10,9 @@
 
 @interface DARAccountSettingsViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+
+- (IBAction)backButtonPressed:(id)sender;
+- (IBAction)logOut:(id)sender;
+
 @end

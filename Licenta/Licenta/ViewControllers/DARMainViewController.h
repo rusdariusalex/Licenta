@@ -22,6 +22,9 @@
 @property (weak, nonatomic) IBOutlet UIView *homeView;
 
 @property (strong, nonatomic) DARTable *table;
+
+@property BOOL homeOrRestaurant;
+
 @property (strong, nonatomic) CLBeacon *activeBeacon;
 
 - (IBAction)finishOrder:(id)sender;

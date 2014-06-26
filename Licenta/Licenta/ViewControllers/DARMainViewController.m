@@ -10,9 +10,10 @@
 #import "DARUser.h"
 #import "UIFont+Additions.h"
 #import "DARFinishOrderViewController.h"
-#import "DARAddItemsViewController.h"
+#import "DARCategoryViewController.h"
 #import "DARAccountSettingsViewController.h"
 #import <Parse/Parse.h>
+#import "DARSelectRestaurantViewController.h"
 
 @interface DARMainViewController ()
 
@@ -53,6 +54,12 @@
     self.restaurantLabel.font = [UIFont openSansRegularWithSize:20];
     self.navigationController.navigationBarHidden = YES;
     self.restaurantView.alpha = 0.0;
+    
+    if (self.activeBeacon == nil) {
+        [self showAtHomeView];
+    }else{
+        [self showAtRestaurantView];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -157,8 +164,14 @@
 }
 
 - (IBAction)addItems:(id)sender {
-    DARAddItemsViewController *addItems = [[DARAddItemsViewController alloc] init];
-    [self.navigationController pushViewController:addItems animated:YES];
+    if (self.activeBeacon != nil) {
+        DARCategoryViewController *categoryView = [[DARCategoryViewController alloc] init];
+        [self.navigationController pushViewController:categoryView animated:YES];
+    }else{
+        DARSelectRestaurantViewController *selectRestaurant = [[DARSelectRestaurantViewController alloc] init];
+        [self.navigationController pushViewController:selectRestaurant animated:YES];
+    }
+
 }
 
 - (IBAction)accountSettings:(id)sender {

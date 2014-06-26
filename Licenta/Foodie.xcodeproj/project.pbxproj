@@ -31,6 +31,21 @@
 		D05F4AFE195AEC0E007B1A6D /* DARAddItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F4AFC195AEC0E007B1A6D /* DARAddItemsViewController.m */; };
 		D05F4AFF195AEC0E007B1A6D /* DARAddItemsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AFD195AEC0E007B1A6D /* DARAddItemsViewController.xib */; };
 		D05F4B02195AF925007B1A6D /* DARTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D05F4B01195AF925007B1A6D /* DARTable.m */; };
+		D065DEB7195BF34B00FDA495 /* btn_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEB6195BF34B00FDA495 /* btn_back_white.png */; };
+		D065DEBC195BF8A400FDA495 /* DARSelectRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D065DEBA195BF8A400FDA495 /* DARSelectRestaurantViewController.m */; };
+		D065DEBD195BF8A400FDA495 /* DARSelectRestaurantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D065DEBB195BF8A400FDA495 /* DARSelectRestaurantViewController.xib */; };
+		D065DEC6195C0CFA00FDA495 /* all.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEBE195C0CFA00FDA495 /* all.png */; };
+		D065DEC7195C0CFA00FDA495 /* dessert.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEBF195C0CFA00FDA495 /* dessert.png */; };
+		D065DEC8195C0CFA00FDA495 /* drink.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEC0195C0CFA00FDA495 /* drink.png */; };
+		D065DEC9195C0CFA00FDA495 /* meat.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEC1195C0CFA00FDA495 /* meat.png */; };
+		D065DECA195C0CFA00FDA495 /* pasta.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEC2195C0CFA00FDA495 /* pasta.png */; };
+		D065DECB195C0CFA00FDA495 /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEC3195C0CFA00FDA495 /* pizza.png */; };
+		D065DECC195C0CFA00FDA495 /* salad.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEC4195C0CFA00FDA495 /* salad.png */; };
+		D065DECD195C0CFA00FDA495 /* soup.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DEC5195C0CFA00FDA495 /* soup.png */; };
+		D065DED2195C0D2C00FDA495 /* DARCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D065DED0195C0D2C00FDA495 /* DARCategoryViewController.m */; };
+		D065DED3195C0D2C00FDA495 /* DARCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D065DED1195C0D2C00FDA495 /* DARCategoryViewController.xib */; };
+		D065DED6195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DED4195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png */; };
+		D065DED7195C195000FDA495 /* bkg_newsletter_sales_bookcloud_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DED5195C195000FDA495 /* bkg_newsletter_sales_bookcloud_yellow.png */; };
 		D0C931FC190FF3FE0047CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FB190FF3FE0047CB9B /* Foundation.framework */; };
 		D0C931FE190FF3FE0047CB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */; };
 		D0C93200190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
@@ -139,6 +154,23 @@
 		D05F4AFD195AEC0E007B1A6D /* DARAddItemsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARAddItemsViewController.xib; sourceTree = "<group>"; };
 		D05F4B00195AF925007B1A6D /* DARTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARTable.h; path = Model/DARTable.h; sourceTree = "<group>"; };
 		D05F4B01195AF925007B1A6D /* DARTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARTable.m; path = Model/DARTable.m; sourceTree = "<group>"; };
+		D065DEB6195BF34B00FDA495 /* btn_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_back_white.png; sourceTree = "<group>"; };
+		D065DEB9195BF8A400FDA495 /* DARSelectRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARSelectRestaurantViewController.h; path = ViewControllers/DARSelectRestaurantViewController.h; sourceTree = "<group>"; };
+		D065DEBA195BF8A400FDA495 /* DARSelectRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARSelectRestaurantViewController.m; path = ViewControllers/DARSelectRestaurantViewController.m; sourceTree = "<group>"; };
+		D065DEBB195BF8A400FDA495 /* DARSelectRestaurantViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARSelectRestaurantViewController.xib; path = ViewControllers/DARSelectRestaurantViewController.xib; sourceTree = "<group>"; };
+		D065DEBE195C0CFA00FDA495 /* all.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = all.png; sourceTree = "<group>"; };
+		D065DEBF195C0CFA00FDA495 /* dessert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dessert.png; sourceTree = "<group>"; };
+		D065DEC0195C0CFA00FDA495 /* drink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = drink.png; sourceTree = "<group>"; };
+		D065DEC1195C0CFA00FDA495 /* meat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meat.png; sourceTree = "<group>"; };
+		D065DEC2195C0CFA00FDA495 /* pasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pasta.png; sourceTree = "<group>"; };
+		D065DEC3195C0CFA00FDA495 /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
+		D065DEC4195C0CFA00FDA495 /* salad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = salad.png; sourceTree = "<group>"; };
+		D065DEC5195C0CFA00FDA495 /* soup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = soup.png; sourceTree = "<group>"; };
+		D065DECF195C0D2C00FDA495 /* DARCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARCategoryViewController.h; path = ViewControllers/DARCategoryViewController.h; sourceTree = "<group>"; };
+		D065DED0195C0D2C00FDA495 /* DARCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARCategoryViewController.m; path = ViewControllers/DARCategoryViewController.m; sourceTree = "<group>"; };
+		D065DED1195C0D2C00FDA495 /* DARCategoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARCategoryViewController.xib; path = ViewControllers/DARCategoryViewController.xib; sourceTree = "<group>"; };
+		D065DED4195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkg_newsletter_sales_bookcloud_blue.png; sourceTree = "<group>"; };
+		D065DED5195C195000FDA495 /* bkg_newsletter_sales_bookcloud_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bkg_newsletter_sales_bookcloud_yellow.png; sourceTree = "<group>"; };
 		D0C931F8190FF3FE0047CB9B /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C931FB190FF3FE0047CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -339,6 +371,26 @@
 			name = AddItemsViewController;
 			sourceTree = "<group>";
 		};
+		D065DEB8195BF87500FDA495 /* SelectRestaurantViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D065DEB9195BF8A400FDA495 /* DARSelectRestaurantViewController.h */,
+				D065DEBA195BF8A400FDA495 /* DARSelectRestaurantViewController.m */,
+				D065DEBB195BF8A400FDA495 /* DARSelectRestaurantViewController.xib */,
+			);
+			name = SelectRestaurantViewController;
+			sourceTree = "<group>";
+		};
+		D065DECE195C0D0D00FDA495 /* CategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D065DECF195C0D2C00FDA495 /* DARCategoryViewController.h */,
+				D065DED0195C0D2C00FDA495 /* DARCategoryViewController.m */,
+				D065DED1195C0D2C00FDA495 /* DARCategoryViewController.xib */,
+			);
+			name = CategoryViewController;
+			sourceTree = "<group>";
+		};
 		D0C931EF190FF3FE0047CB9B = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +508,17 @@
 		D0DFED03193C4DAD00A6C951 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D065DED4195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png */,
+				D065DED5195C195000FDA495 /* bkg_newsletter_sales_bookcloud_yellow.png */,
+				D065DEBE195C0CFA00FDA495 /* all.png */,
+				D065DEBF195C0CFA00FDA495 /* dessert.png */,
+				D065DEC0195C0CFA00FDA495 /* drink.png */,
+				D065DEC1195C0CFA00FDA495 /* meat.png */,
+				D065DEC2195C0CFA00FDA495 /* pasta.png */,
+				D065DEC3195C0CFA00FDA495 /* pizza.png */,
+				D065DEC4195C0CFA00FDA495 /* salad.png */,
+				D065DEC5195C0CFA00FDA495 /* soup.png */,
+				D065DEB6195BF34B00FDA495 /* btn_back_white.png */,
 				D05F4AEB195AE0C1007B1A6D /* plus.png */,
 				D05F4AE9195ADE5E007B1A6D /* icon_cart-empty_up.png */,
 				D05F4AE5195ADA06007B1A6D /* darius.jpg */,
@@ -492,6 +555,8 @@
 		D0DFED22193C4F7C00A6C951 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D065DECE195C0D0D00FDA495 /* CategoryViewController */,
+				D065DEB8195BF87500FDA495 /* SelectRestaurantViewController */,
 				D05F4AFA195AEBF2007B1A6D /* AddItemsViewController */,
 				D05F4AF4195AEBD1007B1A6D /* FinishOrderViewController */,
 				D05F4AED195AEB9B007B1A6D /* AccountSettingsViewController */,
@@ -657,25 +722,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D065DED6195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png in Resources */,
 				D05F4AFF195AEC0E007B1A6D /* DARAddItemsViewController.xib in Resources */,
 				D05F4AE8195ADC22007B1A6D /* darius2.jpg in Resources */,
 				D0DFED27193C4FA600A6C951 /* DARLogInViewController.xib in Resources */,
 				D0DFEDB3193C644300A6C951 /* InfoPlist.strings in Resources */,
 				D05F4AD6195ACF51007B1A6D /* OpenSans-Light.ttf in Resources */,
+				D065DECD195C0CFA00FDA495 /* soup.png in Resources */,
+				D065DECA195C0CFA00FDA495 /* pasta.png in Resources */,
 				D05F4AD7195ACF51007B1A6D /* OpenSans-Regular.ttf in Resources */,
 				D00BEAC3193C75B500BF4335 /* textfieldImage.png in Resources */,
 				D0DFED1E193C4DAD00A6C951 /* AppIcon72x72@2x.png in Resources */,
+				D065DEB7195BF34B00FDA495 /* btn_back_white.png in Resources */,
 				D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */,
 				D05F4AF9195AEBEB007B1A6D /* DARFinishOrderViewController.xib in Resources */,
 				D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */,
+				D065DEC7195C0CFA00FDA495 /* dessert.png in Resources */,
 				D0DFED14193C4DAD00A6C951 /* AppIcon29x29@2x.png in Resources */,
 				D0DFED21193C4DAD00A6C951 /* launch.png in Resources */,
+				D065DECB195C0CFA00FDA495 /* pizza.png in Resources */,
+				D065DED3195C0D2C00FDA495 /* DARCategoryViewController.xib in Resources */,
 				D0C93206190FF3FE0047CB9B /* InfoPlist.strings in Resources */,
 				D0DFED17193C4DAD00A6C951 /* AppIcon50x50.png in Resources */,
 				D0DFED18193C4DAD00A6C951 /* AppIcon50x50@2x.png in Resources */,
 				D05F4ADE195AD484007B1A6D /* icon_photo.png in Resources */,
 				D05F4AE4195AD6FD007B1A6D /* vertical.png in Resources */,
 				D05F4AF3195AEBC9007B1A6D /* DARAccountSettingsViewController.xib in Resources */,
+				D065DED7195C195000FDA495 /* bkg_newsletter_sales_bookcloud_yellow.png in Resources */,
 				D0DFED1A193C4DAD00A6C951 /* AppIcon57x57@2x.png in Resources */,
 				D0DFED15193C4DAD00A6C951 /* AppIcon40x40.png in Resources */,
 				D05F4AE0195AD596007B1A6D /* icon_settings_white.png in Resources */,
@@ -687,13 +760,18 @@
 				D04042E4193F1DE5002F9BFB /* DARMainViewController.xib in Resources */,
 				D0DFED29193C517600A6C951 /* launch2.png in Resources */,
 				D0CDE46F195AC7B300848635 /* DARWaiterViewController.xib in Resources */,
+				D065DEC6195C0CFA00FDA495 /* all.png in Resources */,
 				D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */,
 				D0DFED20193C4DAD00A6C951 /* AppIcon76x76@2x.png in Resources */,
 				D05F4AD8195ACF51007B1A6D /* OpenSans-Semibold.ttf in Resources */,
+				D065DEC8195C0CFA00FDA495 /* drink.png in Resources */,
 				D00BEAC2193C75B500BF4335 /* textfield_background.png in Resources */,
 				D05F4AEC195AE0C1007B1A6D /* plus.png in Resources */,
+				D065DEBD195BF8A400FDA495 /* DARSelectRestaurantViewController.xib in Resources */,
 				D0DFED2B193C52E700A6C951 /* logo.png in Resources */,
 				D0DFED1C193C4DAD00A6C951 /* AppIcon60x60@2x.png in Resources */,
+				D065DEC9195C0CFA00FDA495 /* meat.png in Resources */,
+				D065DECC195C0CFA00FDA495 /* salad.png in Resources */,
 				D05F4AEA195ADE5E007B1A6D /* icon_cart-empty_up.png in Resources */,
 				D0DFED1B193C4DAD00A6C951 /* AppIcon60x60.png in Resources */,
 				D05F4AE6195ADA06007B1A6D /* darius.jpg in Resources */,
@@ -721,6 +799,7 @@
 				D05F4ADC195AD11A007B1A6D /* UIFont+Additions.m in Sources */,
 				D0DFEDC5193C644300A6C951 /* POPVector.mm in Sources */,
 				D04042E3193F1DE5002F9BFB /* DARMainViewController.m in Sources */,
+				D065DEBC195BF8A400FDA495 /* DARSelectRestaurantViewController.m in Sources */,
 				D0DFEDB6193C644300A6C951 /* POPAnimation.mm in Sources */,
 				D0DFEDBA193C644300A6C951 /* POPAnimationTracer.mm in Sources */,
 				D0DFED26193C4FA600A6C951 /* DARLogInViewController.m in Sources */,
@@ -729,6 +808,7 @@
 				D05F4AF8195AEBEB007B1A6D /* DARFinishOrderViewController.m in Sources */,
 				D0DFEDB8193C644300A6C951 /* POPAnimationExtras.mm in Sources */,
 				D0DFEDB7193C644300A6C951 /* POPAnimationEvent.mm in Sources */,
+				D065DED2195C0D2C00FDA495 /* DARCategoryViewController.m in Sources */,
 				D0DFEDB5193C644300A6C951 /* POPAnimatableProperty.mm in Sources */,
 				D0DFEDBB193C644300A6C951 /* POPAnimator.mm in Sources */,
 				D0DFEDBF193C644300A6C951 /* POPDecayAnimation.mm in Sources */,
