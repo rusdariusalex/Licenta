@@ -35,24 +35,50 @@
     return self;
 }
 
-- (void)addUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role{
+- (void)addUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight{
     PFObject *user = [PFObject objectWithClassName:@"User"];
     user[@"name"] = name;
     user[@"email"] = email;
     user[@"password"] = password;
     user[@"address"] = address;
     user[@"role"] = role;
+    user[@"height"] = height;
+    user[@"weight"] = weight;
     
     [user saveInBackground];
 }
 
-- (void)setUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role{
+- (void)setUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight{
     self.name = name;
     self.email = email;
     self.password = password;
     self.address = address;
     self.role = role;
+    self.height = height;
+    self.weight = weight;
 }
 
+- (void)updateUserName:(NSString*)name address:(NSString*)address height:(NSNumber*)height weight:(NSNumber*)weight{
+    
+    self.name = name;
+    self.address = address;
+    self.height = height;
+    self.weight = weight;
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query whereKey:@"email" equalTo:self.email];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *object = [objects firstObject];
+            
+            object[@"name"] = name;
+            object[@"address"] = address;
+            object[@"height"] = height;
+            object[@"weight"] = weight;
+            
+            [object saveInBackground];
+        }
+    }];
+}
 
 @end

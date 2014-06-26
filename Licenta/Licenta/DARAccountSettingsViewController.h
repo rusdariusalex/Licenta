@@ -8,11 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DARAccountSettingsViewController : UIViewController
+@interface DARAccountSettingsViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *addressField;
+@property (weak, nonatomic) IBOutlet UITextField *heightField;
+@property (weak, nonatomic) IBOutlet UITextField *weightField;
 
 - (IBAction)backButtonPressed:(id)sender;
 - (IBAction)logOut:(id)sender;
+- (IBAction)updateInfo:(id)sender;
+
 
 @end

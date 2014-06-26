@@ -13,6 +13,7 @@
 
 @interface DARAccountSettingsViewController (){
     DARUser *user;
+    UIGestureRecognizer *dismissKeyboard;
 }
 
 @end
@@ -33,6 +34,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    dismissKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard:)];
+    [self.view addGestureRecognizer:dismissKeyboard];
+
+    
     user = [DARUser sharedInstance];
     
 }
@@ -42,6 +50,22 @@
     
     self.emailLabel.text = user.email;
     self.emailLabel.font = [UIFont openSansRegularWithSize:20];
+    
+    if (![user.name isEqualToString:@""]) {
+        self.nameField.text = user.name;
+    }
+    
+    if (![user.address isEqualToString:@""]) {
+        self.addressField.text = user.address;
+    }
+    
+    if ([user.height intValue] != 0) {
+        self.heightField.text = [NSString stringWithFormat:@"%@",user.height];
+    }
+    
+    if ([user.weight intValue] != 0) {
+        self.weightField.text = [NSString stringWithFormat:@"%@",user.weight];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,7 +87,78 @@
 
 - (IBAction)logOut:(id)sender {
     
+    [self dismissKeyboard:nil];
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+- (IBAction)updateInfo:(id)sender {
+    
+    [self dismissKeyboard:nil];
+    
+    NSString *name;
+    NSString *address;
+    NSNumber *height;
+    NSNumber *weight;
+    
+    if (![self.nameField.text isEqualToString:@""]) {
+        name = self.nameField.text;
+    }else{
+        name = user.name;
+    }
+    
+    if (![self.addressField.text isEqualToString:@""]) {
+        address = self.addressField.text;
+    }else{
+        address = user.address;
+    }
+    
+    if (![self.heightField.text isEqualToString:@""]) {
+        NSNumberFormatter * formater = [[NSNumberFormatter alloc] init];
+        [formater setNumberStyle:NSNumberFormatterDecimalStyle];
+        height = [formater numberFromString:self.heightField.text];
+    }else{
+        height = user.height;
+    }
+    
+    if (![self.weightField.text isEqualToString:@""]) {
+        NSNumberFormatter * formater = [[NSNumberFormatter alloc] init];
+        [formater setNumberStyle:NSNumberFormatterDecimalStyle];
+        weight = [formater numberFromString:self.weightField.text];
+    }else{
+        weight = user.weight;
+    }
+
+    
+    [user updateUserName:name address:address height:height weight:weight];
+}
+
+- (void)keyboardDidShow:(NSNotification *)notification
+{
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.view setFrame:CGRectMake(0,-196,320,568)];
+        self.emailLabel.alpha = 0.0;
+    }];
+}
+
+-(void)keyboardDidHide:(NSNotification *)notification
+{
+    [UIView animateWithDuration:0.1 animations:^{
+        [self.view setFrame:CGRectMake(0,0,320,568)];
+        self.emailLabel.alpha = 1.0;
+    }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+- (void)dismissKeyboard:(UIGestureRecognizer *)gestureRecognizer{
+    [self.view endEditing:YES];
+}
+
 
 @end

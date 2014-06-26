@@ -16,9 +16,12 @@
 @property (strong, nonatomic) NSString *password;
 @property (strong, nonatomic) NSString *address;
 @property (strong, nonatomic) NSString *role;
+@property (strong, nonatomic) NSNumber *height;
+@property (strong, nonatomic) NSNumber *weight;
 
 + (DARUser*)sharedInstance;
-- (void)addUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role;
-- (void)setUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role;
+- (void)addUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight;
+- (void)setUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight;
+- (void)updateUserName:(NSString*)name address:(NSString*)address height:(NSNumber*)height weight:(NSNumber*)weight;
 
 @end
