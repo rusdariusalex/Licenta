@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *tableNo;
 @property (strong, nonatomic) NSString *restaurantName;
+@property (strong, nonatomic) NSString *offlineRestaurantName;
 @property (strong, nonatomic) NSMutableArray *menu;
 @property (strong, nonatomic) NSNumber *major;
 @property (strong, nonatomic) NSNumber *minor;

@@ -10,6 +10,7 @@
 #import "DARMainViewController.h"
 #import "UIFont+Additions.h"
 #import "DARMainViewController.h"
+#import "DARAddItemsViewController.h"
 
 @interface DARCategoryViewController ()
 
@@ -83,6 +84,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DARAddItemsViewController *addItemsView = [[DARAddItemsViewController alloc] init];
+    
+    addItemsView.category = [self.categories objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:addItemsView animated:YES];
 }
 
 

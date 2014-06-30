@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DARAddItemsViewController : UIViewController
+@interface DARAddItemsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSString *category;
+@property (strong, nonatomic) NSString *restaurantName;
+@property (strong, nonatomic) NSMutableArray *menuArray;
+
+@property (strong,nonatomic) NSMutableArray *colors;
+
+- (IBAction)backButtonPressed:(id)sender;
 
 @end

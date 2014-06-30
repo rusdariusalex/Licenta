@@ -12,6 +12,11 @@
 		D04042DF193F1699002F9BFB /* DARUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D04042DE193F1699002F9BFB /* DARUser.m */; };
 		D04042E3193F1DE5002F9BFB /* DARMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04042E1193F1DE5002F9BFB /* DARMainViewController.m */; };
 		D04042E4193F1DE5002F9BFB /* DARMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04042E2193F1DE5002F9BFB /* DARMainViewController.xib */; };
+		D05B25CB195D42DE005614E7 /* DARMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D05B25CA195D42DE005614E7 /* DARMenuItem.m */; };
+		D05B25CF195D560E005614E7 /* DARMenuItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D05B25CD195D560E005614E7 /* DARMenuItemTableViewCell.m */; };
+		D05B25D0195D560E005614E7 /* DARMenuItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05B25CE195D560E005614E7 /* DARMenuItemTableViewCell.xib */; };
+		D05B25D3195D66F2005614E7 /* UIColor-Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D05B25D2195D66F2005614E7 /* UIColor-Additions.m */; };
+		D05B25D5195D673C005614E7 /* ColorShelfValues.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05B25D4195D673C005614E7 /* ColorShelfValues.plist */; };
 		D05F4AD6195ACF51007B1A6D /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AD3195ACF51007B1A6D /* OpenSans-Light.ttf */; };
 		D05F4AD7195ACF51007B1A6D /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AD4195ACF51007B1A6D /* OpenSans-Regular.ttf */; };
 		D05F4AD8195ACF51007B1A6D /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D05F4AD5195ACF51007B1A6D /* OpenSans-Semibold.ttf */; };
@@ -130,6 +135,14 @@
 		D04042E0193F1DE5002F9BFB /* DARMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARMainViewController.h; path = ViewControllers/DARMainViewController.h; sourceTree = "<group>"; };
 		D04042E1193F1DE5002F9BFB /* DARMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARMainViewController.m; path = ViewControllers/DARMainViewController.m; sourceTree = "<group>"; };
 		D04042E2193F1DE5002F9BFB /* DARMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARMainViewController.xib; path = ViewControllers/DARMainViewController.xib; sourceTree = "<group>"; };
+		D05B25C9195D42DE005614E7 /* DARMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARMenuItem.h; path = Model/DARMenuItem.h; sourceTree = "<group>"; };
+		D05B25CA195D42DE005614E7 /* DARMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARMenuItem.m; path = Model/DARMenuItem.m; sourceTree = "<group>"; };
+		D05B25CC195D560E005614E7 /* DARMenuItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARMenuItemTableViewCell.h; path = ViewControllers/DARMenuItemTableViewCell.h; sourceTree = "<group>"; };
+		D05B25CD195D560E005614E7 /* DARMenuItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARMenuItemTableViewCell.m; path = ViewControllers/DARMenuItemTableViewCell.m; sourceTree = "<group>"; };
+		D05B25CE195D560E005614E7 /* DARMenuItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARMenuItemTableViewCell.xib; path = ViewControllers/DARMenuItemTableViewCell.xib; sourceTree = "<group>"; };
+		D05B25D1195D66F2005614E7 /* UIColor-Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor-Additions.h"; sourceTree = "<group>"; };
+		D05B25D2195D66F2005614E7 /* UIColor-Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Additions.m"; sourceTree = "<group>"; };
+		D05B25D4195D673C005614E7 /* ColorShelfValues.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ColorShelfValues.plist; sourceTree = "<group>"; };
 		D05F4AD3195ACF51007B1A6D /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		D05F4AD4195ACF51007B1A6D /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		D05F4AD5195ACF51007B1A6D /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
@@ -318,6 +331,8 @@
 				D04042DE193F1699002F9BFB /* DARUser.m */,
 				D05F4B00195AF925007B1A6D /* DARTable.h */,
 				D05F4B01195AF925007B1A6D /* DARTable.m */,
+				D05B25C9195D42DE005614E7 /* DARMenuItem.h */,
+				D05B25CA195D42DE005614E7 /* DARMenuItem.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -335,6 +350,8 @@
 		D05F4AD9195AD11A007B1A6D /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				D05B25D1195D66F2005614E7 /* UIColor-Additions.h */,
+				D05B25D2195D66F2005614E7 /* UIColor-Additions.m */,
 				D05F4ADA195AD11A007B1A6D /* UIFont+Additions.h */,
 				D05F4ADB195AD11A007B1A6D /* UIFont+Additions.m */,
 			);
@@ -367,6 +384,9 @@
 				D05F4AFB195AEC0E007B1A6D /* DARAddItemsViewController.h */,
 				D05F4AFC195AEC0E007B1A6D /* DARAddItemsViewController.m */,
 				D05F4AFD195AEC0E007B1A6D /* DARAddItemsViewController.xib */,
+				D05B25CC195D560E005614E7 /* DARMenuItemTableViewCell.h */,
+				D05B25CD195D560E005614E7 /* DARMenuItemTableViewCell.m */,
+				D05B25CE195D560E005614E7 /* DARMenuItemTableViewCell.xib */,
 			);
 			name = AddItemsViewController;
 			sourceTree = "<group>";
@@ -508,6 +528,7 @@
 		D0DFED03193C4DAD00A6C951 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D05B25D4195D673C005614E7 /* ColorShelfValues.plist */,
 				D065DED4195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png */,
 				D065DED5195C195000FDA495 /* bkg_newsletter_sales_bookcloud_yellow.png */,
 				D065DEBE195C0CFA00FDA495 /* all.png */,
@@ -737,7 +758,9 @@
 				D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */,
 				D05F4AF9195AEBEB007B1A6D /* DARFinishOrderViewController.xib in Resources */,
 				D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */,
+				D05B25D0195D560E005614E7 /* DARMenuItemTableViewCell.xib in Resources */,
 				D065DEC7195C0CFA00FDA495 /* dessert.png in Resources */,
+				D05B25D5195D673C005614E7 /* ColorShelfValues.plist in Resources */,
 				D0DFED14193C4DAD00A6C951 /* AppIcon29x29@2x.png in Resources */,
 				D0DFED21193C4DAD00A6C951 /* launch.png in Resources */,
 				D065DECB195C0CFA00FDA495 /* pizza.png in Resources */,
@@ -797,6 +820,7 @@
 				D0C9320C190FF3FE0047CB9B /* DARAppDelegate.m in Sources */,
 				D0DFEDB9193C644300A6C951 /* POPAnimationRuntime.mm in Sources */,
 				D05F4ADC195AD11A007B1A6D /* UIFont+Additions.m in Sources */,
+				D05B25CB195D42DE005614E7 /* DARMenuItem.m in Sources */,
 				D0DFEDC5193C644300A6C951 /* POPVector.mm in Sources */,
 				D04042E3193F1DE5002F9BFB /* DARMainViewController.m in Sources */,
 				D065DEBC195BF8A400FDA495 /* DARSelectRestaurantViewController.m in Sources */,
@@ -825,6 +849,8 @@
 				D0CDE46E195AC7B300848635 /* DARWaiterViewController.m in Sources */,
 				D0DFEDBE193C644300A6C951 /* POPCustomAnimation.mm in Sources */,
 				D05F4AFE195AEC0E007B1A6D /* DARAddItemsViewController.m in Sources */,
+				D05B25CF195D560E005614E7 /* DARMenuItemTableViewCell.m in Sources */,
+				D05B25D3195D66F2005614E7 /* UIColor-Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

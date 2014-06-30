@@ -55,8 +55,6 @@
             
             [self.tableView reloadData];
             [self.activityIndicator setAlpha:0.0];
-            
-            NSLog(@"%@",self.restaurants);
         }
     }];
 }
@@ -110,6 +108,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DARTable *table = [DARTable sharedInstance];
+    
+    table.offlineRestaurantName = [self.restaurants objectAtIndex:indexPath.row];
     
     DARCategoryViewController *categoryView = [[DARCategoryViewController alloc] init];
     [self.navigationController pushViewController:categoryView animated:YES];
