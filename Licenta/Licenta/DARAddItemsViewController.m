@@ -14,6 +14,8 @@
 #import "DARMenuItemTableViewCell.h"
 #import "UIColor-Additions.h"
 #import <Parse/Parse.h>
+#import "DARItemViewController.h"
+#import "DARFinishOrderViewController.h"
 
 @interface DARAddItemsViewController (){
     DARTable *table;
@@ -94,6 +96,11 @@
     [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:index-1] animated:YES];
 }
 
+- (IBAction)finishOrder:(id)sender {
+    DARFinishOrderViewController *finishOrder  =[[DARFinishOrderViewController alloc] init];
+    [self.navigationController pushViewController:finishOrder animated:YES];
+}
+
 
 #pragma mark - Table View
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -141,6 +148,20 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DARItemViewController *itemView = [[DARItemViewController alloc] init];
+    
+    menuItemForCell = [self.menuArray objectAtIndex:indexPath.row];
+    
+    itemView.itemName = menuItemForCell.name;
+    itemView.itemPrice = menuItemForCell.price;
+    itemView.itemDescription = menuItemForCell.description;
+    itemView.itemImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:menuItemForCell.photoURL]]];
+    itemView.itemCalories = menuItemForCell.calories;
+    itemView.item = menuItemForCell;
+    
+    
+    [self.navigationController pushViewController:itemView animated:YES];
 }
 
 - (NSArray *)wheelColors {

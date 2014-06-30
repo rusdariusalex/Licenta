@@ -21,5 +21,7 @@
 @property (strong,nonatomic) NSMutableArray *colors;
 
 - (IBAction)backButtonPressed:(id)sender;
+- (IBAction)finishOrder:(id)sender;
+
 
 @end
