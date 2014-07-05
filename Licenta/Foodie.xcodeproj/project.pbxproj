@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D00BEAC2193C75B500BF4335 /* textfield_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D00BEAC0193C75B500BF4335 /* textfield_background.png */; };
 		D00BEAC3193C75B500BF4335 /* textfieldImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D00BEAC1193C75B500BF4335 /* textfieldImage.png */; };
+		D029D10D19682F6F00B62346 /* DARWaiterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D029D10B19682F6F00B62346 /* DARWaiterDetailViewController.m */; };
+		D029D10E19682F6F00B62346 /* DARWaiterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D029D10C19682F6F00B62346 /* DARWaiterDetailViewController.xib */; };
+		D029D112196838E000B62346 /* DARWaiterOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D029D110196838E000B62346 /* DARWaiterOrderTableViewCell.m */; };
+		D029D113196838E000B62346 /* DARWaiterOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D029D111196838E000B62346 /* DARWaiterOrderTableViewCell.xib */; };
 		D02E0BC9196539B9005B7111 /* DAROrderForWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E0BC8196539B9005B7111 /* DAROrderForWaiter.m */; };
 		D04042DF193F1699002F9BFB /* DARUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D04042DE193F1699002F9BFB /* DARUser.m */; };
 		D04042E3193F1DE5002F9BFB /* DARMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04042E1193F1DE5002F9BFB /* DARMainViewController.m */; };
@@ -141,6 +145,12 @@
 /* Begin PBXFileReference section */
 		D00BEAC0193C75B500BF4335 /* textfield_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfield_background.png; sourceTree = "<group>"; };
 		D00BEAC1193C75B500BF4335 /* textfieldImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfieldImage.png; sourceTree = "<group>"; };
+		D029D10A19682F6F00B62346 /* DARWaiterDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARWaiterDetailViewController.h; path = ViewControllers/DARWaiterDetailViewController.h; sourceTree = "<group>"; };
+		D029D10B19682F6F00B62346 /* DARWaiterDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARWaiterDetailViewController.m; path = ViewControllers/DARWaiterDetailViewController.m; sourceTree = "<group>"; };
+		D029D10C19682F6F00B62346 /* DARWaiterDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARWaiterDetailViewController.xib; path = ViewControllers/DARWaiterDetailViewController.xib; sourceTree = "<group>"; };
+		D029D10F196838E000B62346 /* DARWaiterOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DARWaiterOrderTableViewCell.h; sourceTree = "<group>"; };
+		D029D110196838E000B62346 /* DARWaiterOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARWaiterOrderTableViewCell.m; sourceTree = "<group>"; };
+		D029D111196838E000B62346 /* DARWaiterOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DARWaiterOrderTableViewCell.xib; sourceTree = "<group>"; };
 		D02E0BC7196539B9005B7111 /* DAROrderForWaiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAROrderForWaiter.h; path = Model/DAROrderForWaiter.h; sourceTree = "<group>"; };
 		D02E0BC8196539B9005B7111 /* DAROrderForWaiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAROrderForWaiter.m; path = Model/DAROrderForWaiter.m; sourceTree = "<group>"; };
 		D04042DD193F1699002F9BFB /* DARUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARUser.h; path = Model/DARUser.h; sourceTree = "<group>"; };
@@ -353,6 +363,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D029D10919682F4400B62346 /* WaiterDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				D029D10A19682F6F00B62346 /* DARWaiterDetailViewController.h */,
+				D029D10B19682F6F00B62346 /* DARWaiterDetailViewController.m */,
+				D029D10C19682F6F00B62346 /* DARWaiterDetailViewController.xib */,
+				D029D10F196838E000B62346 /* DARWaiterOrderTableViewCell.h */,
+				D029D110196838E000B62346 /* DARWaiterOrderTableViewCell.m */,
+				D029D111196838E000B62346 /* DARWaiterOrderTableViewCell.xib */,
+			);
+			name = WaiterDetailView;
+			sourceTree = "<group>";
+		};
 		D04042DC193F167C002F9BFB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +597,7 @@
 				D0E231891967FEA200E0CE46 /* DARWaiterTableViewCell.h */,
 				D0E2318A1967FEA200E0CE46 /* DARWaiterTableViewCell.m */,
 				D0E2318B1967FEA200E0CE46 /* DARWaiterTableViewCell.xib */,
+				D029D10919682F4400B62346 /* WaiterDetailView */,
 			);
 			name = WaiterViewController;
 			sourceTree = "<group>";
@@ -812,6 +836,7 @@
 				D065DEB7195BF34B00FDA495 /* btn_back_white.png in Resources */,
 				D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */,
 				D05F4AF9195AEBEB007B1A6D /* DARFinishOrderViewController.xib in Resources */,
+				D029D113196838E000B62346 /* DARWaiterOrderTableViewCell.xib in Resources */,
 				D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */,
 				D05B25D0195D560E005614E7 /* DARMenuItemTableViewCell.xib in Resources */,
 				D065DEC7195C0CFA00FDA495 /* dessert.png in Resources */,
@@ -850,6 +875,7 @@
 				D05F4AEC195AE0C1007B1A6D /* plus.png in Resources */,
 				D065DEBD195BF8A400FDA495 /* DARSelectRestaurantViewController.xib in Resources */,
 				D0DFED2B193C52E700A6C951 /* logo.png in Resources */,
+				D029D10E19682F6F00B62346 /* DARWaiterDetailViewController.xib in Resources */,
 				D0DFED1C193C4DAD00A6C951 /* AppIcon60x60@2x.png in Resources */,
 				D065DEC9195C0CFA00FDA495 /* meat.png in Resources */,
 				D065DECC195C0CFA00FDA495 /* salad.png in Resources */,
@@ -885,6 +911,7 @@
 				D085721219615AEE005975CC /* DAROrder.m in Sources */,
 				D065DEBC195BF8A400FDA495 /* DARSelectRestaurantViewController.m in Sources */,
 				D0DFEDB6193C644300A6C951 /* POPAnimation.mm in Sources */,
+				D029D10D19682F6F00B62346 /* DARWaiterDetailViewController.m in Sources */,
 				D0DFEDBA193C644300A6C951 /* POPAnimationTracer.mm in Sources */,
 				D0DFED26193C4FA600A6C951 /* DARLogInViewController.m in Sources */,
 				D0DFEDC0193C644300A6C951 /* POPGeometry.mm in Sources */,
@@ -906,6 +933,7 @@
 				D0C93208190FF3FE0047CB9B /* main.m in Sources */,
 				D02E0BC9196539B9005B7111 /* DAROrderForWaiter.m in Sources */,
 				D0DFEDBD193C644300A6C951 /* POPCGUtils.mm in Sources */,
+				D029D112196838E000B62346 /* DARWaiterOrderTableViewCell.m in Sources */,
 				D085720F19615A4C005975CC /* DAROrderItem.m in Sources */,
 				D0DFEDC2193C644300A6C951 /* POPMath.mm in Sources */,
 				D05F4B02195AF925007B1A6D /* DARTable.m in Sources */,

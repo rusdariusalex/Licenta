@@ -12,6 +12,7 @@
 #import "DAROrderForWaiter.h"
 #import "DARWaiterTableViewCell.h"
 #import "UIColor-Additions.h"
+#import "DARWaiterDetailViewController.h"
 
 @interface DARWaiterViewController ()
 
@@ -68,6 +69,12 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 - (IBAction)logOut:(id)sender {
     float index = [self.navigationController.viewControllers indexOfObject:self];
     [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:index-1] animated:YES];
@@ -111,6 +118,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
+    DAROrderForWaiter *order = [[DAROrderForWaiter alloc] init];
+    order = [self.orders objectAtIndex:indexPath.row];
+    
+    DARWaiterDetailViewController *detailView = [[DARWaiterDetailViewController alloc] init];
+    
+    detailView.order = order;
+    
+    [self.navigationController pushViewController:detailView animated:YES];
 }
 
 - (NSArray *)wheelColors {
