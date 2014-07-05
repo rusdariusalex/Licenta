@@ -18,17 +18,19 @@
         self.price = [NSNumber numberWithInt:0];
         self.description = @"";
         self.photoURL = @"";
+        self.restaurant = @"";
     }
     return self;
 }
 
 
-- (DARMenuItem*)menuItemWithName:(NSString*)name description:(NSString*)description photoURL:(NSString*)photURL calories:(NSNumber*)calories price:(NSNumber*)price;{
+- (DARMenuItem*)menuItemWithName:(NSString*)name description:(NSString*)description photoURL:(NSString*)photURL calories:(NSNumber*)calories price:(NSNumber*)price restaurant:(NSString *)restaurant{
     self.name = name;
     self.description = description;
     self.photoURL = photURL;
     self.calories = calories;
     self.price = price;
+    self.restaurant = restaurant;
     
     return self;
 }

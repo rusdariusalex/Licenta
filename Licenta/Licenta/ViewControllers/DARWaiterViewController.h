@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DARWaiterViewController : UIViewController
+@interface DARWaiterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *userLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSMutableArray *orders;
+
+@property (strong,nonatomic) NSMutableArray *colors;
+
+- (IBAction)logOut:(id)sender;
 
 @end

@@ -70,18 +70,16 @@
                                           description:[object objectForKey:@"description"]
                                              photoURL:[object objectForKey:@"photoURL"]
                                              calories:[object objectForKey:@"calories"]
-                                                price:[object objectForKey:@"price"]];
+                                                price:[object objectForKey:@"price"]
+                                           restaurant:[object objectForKey:@"restaurant"]];
                 [self.menuArray addObject:menuItem];
             }
             
             [self.tableView reloadData];
             [self.activityIndicator setAlpha:0.0];
-            
-            NSLog(@"%@",self.menuArray);
         }
     }];
 
-    
     [self.activityIndicator startAnimating];
 }
 
@@ -165,7 +163,6 @@
 }
 
 - (NSArray *)wheelColors {
-    // loading hex colors
     NSString *colorsPath = [[NSBundle mainBundle] pathForResource:@"ColorShelfValues" ofType:@"plist"];
     NSArray *colors = [NSArray arrayWithContentsOfFile:colorsPath];
     

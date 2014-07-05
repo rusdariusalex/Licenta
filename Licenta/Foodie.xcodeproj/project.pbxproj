@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D00BEAC2193C75B500BF4335 /* textfield_background.png in Resources */ = {isa = PBXBuildFile; fileRef = D00BEAC0193C75B500BF4335 /* textfield_background.png */; };
 		D00BEAC3193C75B500BF4335 /* textfieldImage.png in Resources */ = {isa = PBXBuildFile; fileRef = D00BEAC1193C75B500BF4335 /* textfieldImage.png */; };
+		D02E0BC9196539B9005B7111 /* DAROrderForWaiter.m in Sources */ = {isa = PBXBuildFile; fileRef = D02E0BC8196539B9005B7111 /* DAROrderForWaiter.m */; };
 		D04042DF193F1699002F9BFB /* DARUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D04042DE193F1699002F9BFB /* DARUser.m */; };
 		D04042E3193F1DE5002F9BFB /* DARMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04042E1193F1DE5002F9BFB /* DARMainViewController.m */; };
 		D04042E4193F1DE5002F9BFB /* DARMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D04042E2193F1DE5002F9BFB /* DARMainViewController.xib */; };
@@ -113,6 +114,8 @@
 		D0DFEDC5193C644300A6C951 /* POPVector.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0DFEDAD193C644300A6C951 /* POPVector.mm */; };
 		D0DFEDC6193C644300A6C951 /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0DFEDB0193C644300A6C951 /* TransformationMatrix.cpp */; };
 		D0DFEDC8193C6A7200A6C951 /* icon_x_over.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFEDC7193C6A7200A6C951 /* icon_x_over.png */; };
+		D0E2318C1967FEA200E0CE46 /* DARWaiterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E2318A1967FEA200E0CE46 /* DARWaiterTableViewCell.m */; };
+		D0E2318D1967FEA200E0CE46 /* DARWaiterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0E2318B1967FEA200E0CE46 /* DARWaiterTableViewCell.xib */; };
 		D0EB0FF1193CAB2D0043F3E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FF0193CAB2D0043F3E7 /* Parse.framework */; };
 		D0EB0FF3193CAB4C0043F3E7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FF2193CAB4C0043F3E7 /* AudioToolbox.framework */; };
 		D0EB0FF5193CAB540043F3E7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FF4193CAB540043F3E7 /* CFNetwork.framework */; };
@@ -138,6 +141,8 @@
 /* Begin PBXFileReference section */
 		D00BEAC0193C75B500BF4335 /* textfield_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfield_background.png; sourceTree = "<group>"; };
 		D00BEAC1193C75B500BF4335 /* textfieldImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textfieldImage.png; sourceTree = "<group>"; };
+		D02E0BC7196539B9005B7111 /* DAROrderForWaiter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DAROrderForWaiter.h; path = Model/DAROrderForWaiter.h; sourceTree = "<group>"; };
+		D02E0BC8196539B9005B7111 /* DAROrderForWaiter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DAROrderForWaiter.m; path = Model/DAROrderForWaiter.m; sourceTree = "<group>"; };
 		D04042DD193F1699002F9BFB /* DARUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARUser.h; path = Model/DARUser.h; sourceTree = "<group>"; };
 		D04042DE193F1699002F9BFB /* DARUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARUser.m; path = Model/DARUser.m; sourceTree = "<group>"; };
 		D04042E0193F1DE5002F9BFB /* DARMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARMainViewController.h; path = ViewControllers/DARMainViewController.h; sourceTree = "<group>"; };
@@ -299,6 +304,9 @@
 		D0DFEDB1193C644300A6C951 /* TransformationMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationMatrix.h; sourceTree = "<group>"; };
 		D0DFEDB2193C644300A6C951 /* UnitBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitBezier.h; sourceTree = "<group>"; };
 		D0DFEDC7193C6A7200A6C951 /* icon_x_over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_x_over.png; sourceTree = "<group>"; };
+		D0E231891967FEA200E0CE46 /* DARWaiterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARWaiterTableViewCell.h; path = ViewControllers/DARWaiterTableViewCell.h; sourceTree = "<group>"; };
+		D0E2318A1967FEA200E0CE46 /* DARWaiterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARWaiterTableViewCell.m; path = ViewControllers/DARWaiterTableViewCell.m; sourceTree = "<group>"; };
+		D0E2318B1967FEA200E0CE46 /* DARWaiterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARWaiterTableViewCell.xib; path = ViewControllers/DARWaiterTableViewCell.xib; sourceTree = "<group>"; };
 		D0EB0FF0193CAB2D0043F3E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D0EB0FF2193CAB4C0043F3E7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D0EB0FF4193CAB540043F3E7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -358,6 +366,8 @@
 				D085720E19615A4C005975CC /* DAROrderItem.m */,
 				D085721019615AEE005975CC /* DAROrder.h */,
 				D085721119615AEE005975CC /* DAROrder.m */,
+				D02E0BC7196539B9005B7111 /* DAROrderForWaiter.h */,
+				D02E0BC8196539B9005B7111 /* DAROrderForWaiter.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -561,6 +571,9 @@
 				D0CDE46B195AC7B300848635 /* DARWaiterViewController.h */,
 				D0CDE46C195AC7B300848635 /* DARWaiterViewController.m */,
 				D0CDE46D195AC7B300848635 /* DARWaiterViewController.xib */,
+				D0E231891967FEA200E0CE46 /* DARWaiterTableViewCell.h */,
+				D0E2318A1967FEA200E0CE46 /* DARWaiterTableViewCell.m */,
+				D0E2318B1967FEA200E0CE46 /* DARWaiterTableViewCell.xib */,
 			);
 			name = WaiterViewController;
 			sourceTree = "<group>";
@@ -818,6 +831,7 @@
 				D0DFED15193C4DAD00A6C951 /* AppIcon40x40.png in Resources */,
 				D05F4AE0195AD596007B1A6D /* icon_settings_white.png in Resources */,
 				D085721719616D80005975CC /* DARFinishTableViewCell.xib in Resources */,
+				D0E2318D1967FEA200E0CE46 /* DARWaiterTableViewCell.xib in Resources */,
 				D0DFEDB4193C644300A6C951 /* pop-Info.plist in Resources */,
 				D05F4AE2195AD689007B1A6D /* icon_cart_white.png in Resources */,
 				D0DFED1F193C4DAD00A6C951 /* AppIcon76x76.png in Resources */,
@@ -890,6 +904,7 @@
 				D04042DF193F1699002F9BFB /* DARUser.m in Sources */,
 				D0DFEDC1193C644300A6C951 /* POPLayerExtras.mm in Sources */,
 				D0C93208190FF3FE0047CB9B /* main.m in Sources */,
+				D02E0BC9196539B9005B7111 /* DAROrderForWaiter.m in Sources */,
 				D0DFEDBD193C644300A6C951 /* POPCGUtils.mm in Sources */,
 				D085720F19615A4C005975CC /* DAROrderItem.m in Sources */,
 				D0DFEDC2193C644300A6C951 /* POPMath.mm in Sources */,
@@ -898,6 +913,7 @@
 				D0CDE46E195AC7B300848635 /* DARWaiterViewController.m in Sources */,
 				D0DFEDBE193C644300A6C951 /* POPCustomAnimation.mm in Sources */,
 				D05F4AFE195AEC0E007B1A6D /* DARAddItemsViewController.m in Sources */,
+				D0E2318C1967FEA200E0CE46 /* DARWaiterTableViewCell.m in Sources */,
 				D085721619616D80005975CC /* DARFinishTableViewCell.m in Sources */,
 				D05B25CF195D560E005614E7 /* DARMenuItemTableViewCell.m in Sources */,
 				D05B25D3195D66F2005614E7 /* UIColor-Additions.m in Sources */,

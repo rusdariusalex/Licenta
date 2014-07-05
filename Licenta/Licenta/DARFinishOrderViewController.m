@@ -115,6 +115,9 @@
                 self.orderSuccessfulLabel.alpha = 0.0;
             }completion:^(BOOL finished) {
                 self.addItemsLabel.alpha = 1.0;
+                
+                self.totalCalories.text = @"0";
+                self.totalLabel.text = @"0";
             }];
         }];
     }

@@ -276,7 +276,7 @@
                             self.showSignInButton.alpha = 0.0;
                             self.showSignUpButton.alpha = 0.0;
                             
-                            DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
+                            DARWaiterViewController *mainViewController  =[[DARWaiterViewController alloc] init];
                             
                             [self.navigationController pushViewController:mainViewController animated:YES];
                         }

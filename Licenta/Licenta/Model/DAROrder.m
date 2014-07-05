@@ -7,7 +7,7 @@
 //
 
 #import "DAROrder.h"
-
+#import "DARTable.h"
 
 @implementation DAROrder
 
@@ -56,8 +56,17 @@
     
     NSMutableArray *itemsToAdd = [[NSMutableArray alloc] init];
     
+    NSString *restaurantName = [[NSString alloc] init];
+    restaurantName = @"";
+    
     for (DAROrderItem *orderItem in self.items) {
         NSMutableDictionary *ordItms = [[NSMutableDictionary alloc] init];
+        
+        if ([restaurantName isEqualToString:@""]) {
+            restaurantName = orderItem.menuItem.restaurant;
+        }else if (![restaurantName isEqualToString:orderItem.menuItem.restaurant]){
+            restaurantName = [NSString stringWithFormat:@"%@+%@",restaurantName,orderItem.menuItem.restaurant];
+        }
         
         [ordItms setObject:orderItem.quantity forKey:@"quantity"];
         [ordItms setObject:orderItem.menuItem.name forKey:@"name"];
@@ -65,8 +74,10 @@
         
         [itemsToAdd addObject:ordItms];
     }
-    
+
     order[@"items"] = itemsToAdd;
+    
+    order[@"restaurant"] = restaurantName;
     
     order[@"address"] = self.address;
     order[@"user"] = self.user;

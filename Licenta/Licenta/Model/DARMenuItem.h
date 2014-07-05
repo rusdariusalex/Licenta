@@ -15,7 +15,8 @@
 @property (strong, nonatomic) NSString *photoURL;
 @property (strong, nonatomic) NSNumber *calories;
 @property (strong, nonatomic) NSNumber *price;
+@property (strong, nonatomic) NSString *restaurant;
 
-- (DARMenuItem*)menuItemWithName:(NSString*)name description:(NSString*)description photoURL:(NSString*)photURL calories:(NSNumber*)calories price:(NSNumber*)price;
+- (DARMenuItem*)menuItemWithName:(NSString*)name description:(NSString*)description photoURL:(NSString*)photURL calories:(NSNumber*)calories price:(NSNumber*)price restaurant:(NSString*)restaurant;
 
 @end
