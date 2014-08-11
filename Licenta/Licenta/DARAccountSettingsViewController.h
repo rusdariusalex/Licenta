@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *addressField;
 @property (weak, nonatomic) IBOutlet UITextField *heightField;
 @property (weak, nonatomic) IBOutlet UITextField *weightField;
+@property (weak, nonatomic) IBOutlet UITextField *ageField;
+@property (weak, nonatomic) IBOutlet UITextField *sexField;
 
 - (IBAction)backButtonPressed:(id)sender;
 - (IBAction)logOut:(id)sender;

@@ -191,8 +191,12 @@
                         [user addUser:self.signUpNameTextField.text
                                 email:self.signUpEmailTextField.text
                              password:self.signUpPasswordTextField.text
-                              address:@"" role:@"user" height:[NSNumber numberWithInt:0]
-                               weight:[NSNumber numberWithInt:0]];
+                              address:@""
+                                 role:@"user"
+                               height:[NSNumber numberWithInt:0]
+                               weight:[NSNumber numberWithInt:0]
+                                  age:[NSNumber numberWithInt:0]
+                                  sex:@""];
                         
                         [user setUser:self.signUpNameTextField.text
                                 email:self.signUpEmailTextField.text
@@ -200,7 +204,9 @@
                               address:@""
                                  role:@"user"
                                height:[NSNumber numberWithInt:0]
-                               weight:[NSNumber numberWithInt:0]];
+                               weight:[NSNumber numberWithInt:0]
+                                  age:[NSNumber numberWithInt:0]
+                                  sex:@""];
                         
                         self.greyView.alpha = 0.0;
                         self.showSignInButton.alpha = 0.0;
@@ -252,7 +258,9 @@
                                   address:[object objectForKey:@"address"]
                                      role:[object objectForKey:@"role"]
                                    height:[object objectForKey:@"height"]
-                                   weight:[object objectForKey:@"weight"]];
+                                   weight:[object objectForKey:@"weight"]
+                                      age:[object objectForKey:@"age"]
+                                      sex:[object objectForKey:@"sex"]];
                             
                             self.greyView.alpha = 0.0;
                             self.showSignInButton.alpha = 0.0;
@@ -270,7 +278,9 @@
                                   address:[object objectForKey:@"address"]
                                      role:[object objectForKey:@"role"]
                                    height:[object objectForKey:@"height"]
-                                   weight:[object objectForKey:@"weight"]];
+                                   weight:[object objectForKey:@"weight"]
+                                      age:[object objectForKey:@"age"]
+                                      sex:[object objectForKey:@"sex"]];
                             
                             self.greyView.alpha = 0.0;
                             self.showSignInButton.alpha = 0.0;

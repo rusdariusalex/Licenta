@@ -35,7 +35,7 @@
     return self;
 }
 
-- (void)addUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight{
+- (void)addUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight age:(NSNumber*)age sex:(NSString*)sex{
     PFObject *user = [PFObject objectWithClassName:@"User"];
     user[@"name"] = name;
     user[@"email"] = email;
@@ -44,11 +44,13 @@
     user[@"role"] = role;
     user[@"height"] = height;
     user[@"weight"] = weight;
+    user[@"age"] = age;
+    user[@"sex"] = sex;
     
     [user saveInBackground];
 }
 
-- (void)setUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight{
+- (void)setUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight age:(NSNumber*)age sex:(NSString*)sex{
     self.name = name;
     self.email = email;
     self.password = password;
@@ -56,14 +58,18 @@
     self.role = role;
     self.height = height;
     self.weight = weight;
+    self.age = age;
+    self.sex = sex;
 }
 
-- (void)updateUserName:(NSString*)name address:(NSString*)address height:(NSNumber*)height weight:(NSNumber*)weight{
+- (void)updateUserName:(NSString*)name address:(NSString*)address height:(NSNumber*)height weight:(NSNumber*)weight age:(NSNumber*)age sex:(NSString*)sex{
     
     self.name = name;
     self.address = address;
     self.height = height;
     self.weight = weight;
+    self.age = age;
+    self.sex = sex;
     
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
     [query whereKey:@"email" equalTo:self.email];
@@ -75,6 +81,8 @@
             object[@"address"] = address;
             object[@"height"] = height;
             object[@"weight"] = weight;
+            object[@"age"] = age;
+            object[@"sex"] = sex;
             
             [object saveInBackground];
         }

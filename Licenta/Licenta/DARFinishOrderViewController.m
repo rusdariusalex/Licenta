@@ -13,9 +13,12 @@
 #import "DAROrderItem.h"
 #import "UIColor-Additions.h"
 #import <Parse/Parse.h>
+#import <CoreMotion/CoreMotion.h>
 
 @interface DARFinishOrderViewController (){
     DAROrderItem *orderItem;
+    CMStepCounter *stepCounter;
+    NSOperationQueue *stepQueue;
 }
 
 @end
@@ -47,11 +50,63 @@
     DARTable *table = [DARTable sharedInstance];
     DARUser *user = [DARUser sharedInstance];
     
-    if ([user.height intValue] !=0 && [user.weight intValue] != 0) {
-        self.recomendedCalories.text = [NSString stringWithFormat:@"%.2f", roundf((66.4730 + 13.7516*[user.weight floatValue] + 5.0033*[user.height floatValue] - 6.7550*30))];
-    }else{
-        self.recomendedCalories.text = @"-";
-    }
+    stepCounter = [[CMStepCounter alloc] init];
+    stepQueue = [[NSOperationQueue alloc] init];
+    stepQueue.maxConcurrentOperationCount = 7;
+    
+    NSDate *now = [NSDate date];
+    
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    NSDateComponents *components = [cal components:NSWeekdayCalendarUnit | NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:[[NSDate alloc] init]];
+    
+    [components setDay:([components day] - 6)];
+    NSDate *lastWeek  = [cal dateFromComponents:components];
+    
+    [stepCounter queryStepCountStartingFrom:lastWeek
+                                          to:now
+                                     toQueue:stepQueue
+                                 withHandler:^(NSInteger numberOfSteps,
+                                               NSError *error) {
+                                     if (error)
+                                     {
+                                         
+                                     }
+                                     else
+                                     {
+                                         float harrisConstant;
+                                         
+                                         if (numberOfSteps/7 <= 5000) {
+                                             harrisConstant = 1.2;
+                                         }else if (numberOfSteps/7 > 5000 && numberOfSteps/7 <= 7500){
+                                             harrisConstant = 1.375;
+                                         }else if (numberOfSteps/7 > 7500 && numberOfSteps/7 <= 10000){
+                                             harrisConstant = 1.55;
+                                         }else if (numberOfSteps/7 > 10000 && numberOfSteps/7 <= 12500){
+                                             harrisConstant = 1.725;
+                                         }else{
+                                             harrisConstant = 1.9;
+                                         }
+                                         
+
+                                         if ([user.height intValue] !=0 && [user.weight intValue] != 0 && [user.age intValue] != 0 && ![user.sex isEqualToString:@""]) {
+                                             float recomended;
+                                             
+                                             if ([user.sex isEqualToString:@"M"]) {
+                                                 recomended = harrisConstant*(88.362 + (13.397*[user.weight floatValue]) + (4.799*[user.height floatValue]) - (5.677*[user.age floatValue]));
+                                                 self.recomendedCalories.text = [NSString stringWithFormat:@"%.2f", recomended];
+                                             }else if ([user.sex isEqualToString:@"F"]){
+                                                 recomended = harrisConstant*(447.593 + (9.247*[user.weight floatValue]) + (3.098*[user.height floatValue]) - (4.330*[user.age floatValue]));
+                                                 self.recomendedCalories.text = [NSString stringWithFormat:@"%.2f", recomended];
+                                             }
+                                             
+                                         }else{
+                                             self.recomendedCalories.text = @"-";
+                                         }
+
+                                     }
+                                 }];
+    
     
     if ([table.tableNo isEqualToString:@""]) {
         if (![user.address isEqualToString:@""]) {

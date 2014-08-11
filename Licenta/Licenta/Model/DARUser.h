@@ -18,10 +18,14 @@
 @property (strong, nonatomic) NSString *role;
 @property (strong, nonatomic) NSNumber *height;
 @property (strong, nonatomic) NSNumber *weight;
+@property (strong, nonatomic) NSNumber *age;
+@property (strong, nonatomic) NSString *sex;
 
 + (DARUser*)sharedInstance;
-- (void)addUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight;
-- (void)setUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight;
-- (void)updateUserName:(NSString*)name address:(NSString*)address height:(NSNumber*)height weight:(NSNumber*)weight;
+- (void)addUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight age:(NSNumber*)age sex:(NSString*)sex;
+
+- (void)setUser:(NSString*)name email:(NSString*)email password:(NSString*)password address:(NSString*)address role:(NSString*)role height:(NSNumber*)height weight:(NSNumber*)weight age:(NSNumber*)age sex:(NSString*)sex;
+
+- (void)updateUserName:(NSString*)name address:(NSString*)address height:(NSNumber*)height weight:(NSNumber*)weight age:(NSNumber*)age sex:(NSString*)sex;
 
 @end

@@ -66,6 +66,14 @@
     if ([user.weight intValue] != 0) {
         self.weightField.text = [NSString stringWithFormat:@"%@",user.weight];
     }
+    
+    if ([user.age intValue] != 0) {
+        self.ageField.text = [NSString stringWithFormat:@"%@",user.age];
+    }
+    
+    if (![user.sex isEqualToString:@""]) {
+        self.sexField.text = user.sex;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -100,6 +108,8 @@
     NSString *address;
     NSNumber *height;
     NSNumber *weight;
+    NSNumber *age;
+    NSString *sex;
     
     if (![self.nameField.text isEqualToString:@""]) {
         name = self.nameField.text;
@@ -128,9 +138,29 @@
     }else{
         weight = user.weight;
     }
+    
+    if (![self.ageField.text isEqualToString:@""]) {
+        NSNumberFormatter * formater = [[NSNumberFormatter alloc] init];
+        [formater setNumberStyle:NSNumberFormatterDecimalStyle];
+        age = [formater numberFromString:self.ageField.text];
+    }else{
+        age = user.age;
+    }
+    
+    if (![self.nameField.text isEqualToString:@""]) {
+        if ([self.sexField.text isEqualToString:@"M"] || [self.sexField.text isEqualToString:@"F"]) {
+            sex = self.sexField.text;
+        }else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sex Field Error!" message:@"You can only enter M or F!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+            return;
+        }
+    }else{
+        sex = user.sex;
+    }
 
     
-    [user updateUserName:name address:address height:height weight:weight];
+    [user updateUserName:name address:address height:height weight:weight age:age sex:sex];
 }
 
 - (void)keyboardDidShow:(NSNotification *)notification
