@@ -11,6 +11,7 @@
 #import "UIColor-Additions.h"
 #import "UIFont+Additions.h"
 #import <Parse/Parse.h>
+#import "DARUser.h"
 
 @interface DARWaiterDetailViewController ()
 
@@ -78,12 +79,90 @@
 }
 
 - (IBAction)assignButtonPressed:(id)sender {
+    PFQuery *query = [PFQuery queryWithClassName:@"Order"];
+    [query whereKey:@"objectId" equalTo:self.order.orderId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *object = [objects firstObject];
+            
+            if ([self.order.userAssigned isEqualToString:@""]) {
+                self.order.userAssigned = [DARUser sharedInstance].email;
+                object[@"userAssigned"] = self.order.userAssigned;
+            }else{
+                self.order.userAssigned = @"";
+                object[@"userAssigned"] = self.order.userAssigned;
+
+            }
+            
+            if ([self.order.status isEqualToString:@"waiting"]) {
+                self.order.status = @"assigned";
+                object[@"userAssigned"] = self.order.status;
+            }else{
+                self.order.status = @"waiting";
+                object[@"userAssigned"] = self.order.status;
+            }
+            
+            [self refreshView];
+            
+            [object saveInBackground];
+        }
+    }];
 }
 
 - (IBAction)serveButtonPressed:(id)sender {
+    PFQuery *query = [PFQuery queryWithClassName:@"Order"];
+    [query whereKey:@"objectId" equalTo:self.order.orderId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *object = [objects firstObject];
+            
+            if ([self.order.userAssigned isEqualToString:@""]) {
+                self.order.userAssigned = [DARUser sharedInstance].email;
+                object[@"userAssigned"] = self.order.userAssigned;
+            }
+            
+            if ([self.order.status isEqualToString:@"assigned"] || [self.order.status isEqualToString:@"waiting"]){
+                self.order.status = @"served";
+                object[@"userAssigned"] = self.order.status;
+            }else{
+                self.order.status = @"assigned";
+                object[@"userAssigned"] = self.order.status;
+            }
+            
+            [self refreshView];
+            
+            [object saveInBackground];
+        }
+    }];
+
 }
 
 - (IBAction)paymentButtonPressed:(id)sender {
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Order"];
+    [query whereKey:@"objectId" equalTo:self.order.orderId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            PFObject *object = [objects firstObject];
+            
+            if ([self.order.userAssigned isEqualToString:@""]) {
+                self.order.userAssigned = [DARUser sharedInstance].email;
+                object[@"userAssigned"] = self.order.userAssigned;
+            }
+            
+            if ([self.order.status isEqualToString:@"assigned"] || [self.order.status isEqualToString:@"waiting"] || [self.order.status isEqualToString:@"served"]) {
+                self.order.status = @"finished";
+                object[@"userAssigned"] = self.order.status;
+            }else{
+                self.order.status = @"assigned";
+                object[@"userAssigned"] = self.order.status;
+            }
+            
+            [self refreshView];
+            
+            [object saveInBackground];
+        }
+    }];
 }
 
 #pragma mark - Table View
