@@ -53,7 +53,6 @@
 - (IBAction)backButtonPressed:(id)sender {
     float index = [self.navigationController.viewControllers indexOfObject:self];
     [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:index-1] animated:YES];
-
 }
 
 #pragma mark - Table View

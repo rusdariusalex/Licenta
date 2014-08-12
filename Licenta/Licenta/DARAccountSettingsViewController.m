@@ -84,13 +84,8 @@
 
 - (IBAction)backButtonPressed:(id)sender {
     
-    for (id viewController in [self.navigationController viewControllers]){
-        if ([viewController isKindOfClass:[DARMainViewController class]])
-        {
-            [self.navigationController popToViewController:viewController animated:YES];
-            break;
-        }
-    }
+    float index = [self.navigationController.viewControllers indexOfObject:self];
+    [self.navigationController popToViewController:[self.navigationController.viewControllers objectAtIndex:index-1] animated:YES];
 }
 
 - (IBAction)logOut:(id)sender {

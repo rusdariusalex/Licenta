@@ -10,12 +10,16 @@
 
 @interface DARLogInViewController : UIViewController <UITextFieldDelegate>
 
-@property (strong, nonatomic) NSNumber *beacon;
+@property (nonatomic) BOOL beacon;
 
 @property (weak, nonatomic) IBOutlet UIImageView *logo;
 @property (weak, nonatomic) IBOutlet UIButton *showSignInButton;
 @property (weak, nonatomic) IBOutlet UIButton *showSignUpButton;
 @property (weak, nonatomic) IBOutlet UIButton *showSettingsButton;
+
+@property (weak, nonatomic) IBOutlet UIImageView *bleTickImage;
+@property (weak, nonatomic) IBOutlet UIImageView *beaconTickImage;
+
 
 @property (weak, nonatomic) IBOutlet UIView *signInView;
 @property (weak, nonatomic) IBOutlet UIView *signUpView;

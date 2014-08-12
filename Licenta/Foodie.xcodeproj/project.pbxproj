@@ -64,6 +64,9 @@
 		D085721619616D80005975CC /* DARFinishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D085721419616D80005975CC /* DARFinishTableViewCell.m */; };
 		D085721719616D80005975CC /* DARFinishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D085721519616D80005975CC /* DARFinishTableViewCell.xib */; };
 		D085721919617430005975CC /* accept_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D085721819617430005975CC /* accept_icon.png */; };
+		D08A863C199A4B9800DE35C2 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = D08A863B199A4B9800DE35C2 /* tick.png */; };
+		D08A8641199A4F1D00DE35C2 /* DARMainBLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A863F199A4F1D00DE35C2 /* DARMainBLEViewController.m */; };
+		D08A8642199A4F1D00DE35C2 /* DARMainBLEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08A8640199A4F1D00DE35C2 /* DARMainBLEViewController.xib */; };
 		D0C931FC190FF3FE0047CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FB190FF3FE0047CB9B /* Foundation.framework */; };
 		D0C931FE190FF3FE0047CB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */; };
 		D0C93200190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
@@ -220,6 +223,10 @@
 		D085721419616D80005975CC /* DARFinishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARFinishTableViewCell.m; path = ViewControllers/DARFinishTableViewCell.m; sourceTree = "<group>"; };
 		D085721519616D80005975CC /* DARFinishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARFinishTableViewCell.xib; path = ViewControllers/DARFinishTableViewCell.xib; sourceTree = "<group>"; };
 		D085721819617430005975CC /* accept_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = accept_icon.png; sourceTree = "<group>"; };
+		D08A863B199A4B9800DE35C2 /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
+		D08A863E199A4F1D00DE35C2 /* DARMainBLEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARMainBLEViewController.h; path = ViewControllers/DARMainBLEViewController.h; sourceTree = "<group>"; };
+		D08A863F199A4F1D00DE35C2 /* DARMainBLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARMainBLEViewController.m; path = ViewControllers/DARMainBLEViewController.m; sourceTree = "<group>"; };
+		D08A8640199A4F1D00DE35C2 /* DARMainBLEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARMainBLEViewController.xib; path = ViewControllers/DARMainBLEViewController.xib; sourceTree = "<group>"; };
 		D0C931F8190FF3FE0047CB9B /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C931FB190FF3FE0047CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -484,6 +491,16 @@
 			name = ItemViewController;
 			sourceTree = "<group>";
 		};
+		D08A863D199A4E9F00DE35C2 /* MainBLEViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D08A863E199A4F1D00DE35C2 /* DARMainBLEViewController.h */,
+				D08A863F199A4F1D00DE35C2 /* DARMainBLEViewController.m */,
+				D08A8640199A4F1D00DE35C2 /* DARMainBLEViewController.xib */,
+			);
+			name = MainBLEViewController;
+			sourceTree = "<group>";
+		};
 		D0C931EF190FF3FE0047CB9B = {
 			isa = PBXGroup;
 			children = (
@@ -605,6 +622,7 @@
 		D0DFED03193C4DAD00A6C951 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D08A863B199A4B9800DE35C2 /* tick.png */,
 				D085721819617430005975CC /* accept_icon.png */,
 				D05B25D4195D673C005614E7 /* ColorShelfValues.plist */,
 				D065DED4195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png */,
@@ -654,6 +672,8 @@
 		D0DFED22193C4F7C00A6C951 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0CDE469195AC64100848635 /* MainViewController */,
+				D08A863D199A4E9F00DE35C2 /* MainBLEViewController */,
 				D085720419614665005975CC /* ItemViewController */,
 				D065DECE195C0D0D00FDA495 /* CategoryViewController */,
 				D065DEB8195BF87500FDA495 /* SelectRestaurantViewController */,
@@ -661,7 +681,6 @@
 				D05F4AF4195AEBD1007B1A6D /* FinishOrderViewController */,
 				D05F4AED195AEB9B007B1A6D /* AccountSettingsViewController */,
 				D0CDE46A195AC76800848635 /* WaiterViewController */,
-				D0CDE469195AC64100848635 /* MainViewController */,
 				D0CDE468195AC60E00848635 /* LogInViewController */,
 			);
 			name = ViewControllers;
@@ -836,6 +855,7 @@
 				D065DEB7195BF34B00FDA495 /* btn_back_white.png in Resources */,
 				D0DFED16193C4DAD00A6C951 /* AppIcon40x40@2x.png in Resources */,
 				D05F4AF9195AEBEB007B1A6D /* DARFinishOrderViewController.xib in Resources */,
+				D08A863C199A4B9800DE35C2 /* tick.png in Resources */,
 				D029D113196838E000B62346 /* DARWaiterOrderTableViewCell.xib in Resources */,
 				D0DFED19193C4DAD00A6C951 /* AppIcon57x57.png in Resources */,
 				D05B25D0195D560E005614E7 /* DARMenuItemTableViewCell.xib in Resources */,
@@ -880,6 +900,7 @@
 				D065DEC9195C0CFA00FDA495 /* meat.png in Resources */,
 				D065DECC195C0CFA00FDA495 /* salad.png in Resources */,
 				D05F4AEA195ADE5E007B1A6D /* icon_cart-empty_up.png in Resources */,
+				D08A8642199A4F1D00DE35C2 /* DARMainBLEViewController.xib in Resources */,
 				D0DFED1B193C4DAD00A6C951 /* AppIcon60x60.png in Resources */,
 				D05F4AE6195ADA06007B1A6D /* darius.jpg in Resources */,
 				D085720919614690005975CC /* DARItemViewController.xib in Resources */,
@@ -925,6 +946,7 @@
 				D0DFEDB5193C644300A6C951 /* POPAnimatableProperty.mm in Sources */,
 				D0DFEDBB193C644300A6C951 /* POPAnimator.mm in Sources */,
 				D0DFEDBF193C644300A6C951 /* POPDecayAnimation.mm in Sources */,
+				D08A8641199A4F1D00DE35C2 /* DARMainBLEViewController.m in Sources */,
 				D0DFEDC4193C644300A6C951 /* POPSpringAnimation.mm in Sources */,
 				D0DFEDC3193C644300A6C951 /* POPPropertyAnimation.mm in Sources */,
 				D0DFEDBC193C644300A6C951 /* POPBasicAnimation.mm in Sources */,

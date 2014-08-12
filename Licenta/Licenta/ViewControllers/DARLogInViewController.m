@@ -11,6 +11,7 @@
 #import <Parse/Parse.h>
 #import "DARUser.h"
 #import "DARMainViewController.h"
+#import "DARMainBLEViewController.h"
 #import "DARWaiterViewController.h"
 
 
@@ -36,6 +37,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.beacon = YES;
+    [self refreshSettingsView];
     
     self.showSignInButton.alpha = 0.0;
     self.showSignUpButton.alpha = 0.0;
@@ -101,9 +105,25 @@
 }
 
 - (IBAction)selectBle:(id)sender {
+    self.beacon = NO;
+    [self refreshSettingsView];
+    [self showSettingsView:nil];
 }
 
 - (IBAction)selectBeacon:(id)sender {
+    self.beacon = YES;
+    [self refreshSettingsView];
+    [self showSettingsView:nil];
+}
+
+- (void)refreshSettingsView{
+    if (self.beacon) {
+        self.beaconTickImage.alpha = 1.0;
+        self.bleTickImage.alpha = 0.0;
+    }else{
+        self.beaconTickImage.alpha = 0.0;
+        self.bleTickImage.alpha = 1.0;
+    }
 }
 
 - (IBAction)showSignIn:(id)sender {
@@ -230,12 +250,16 @@
                                   sex:@""];
                         
                         self.greyView.alpha = 0.0;
-                        self.showSignInButton.alpha = 0.0;
-                        self.showSignUpButton.alpha = 0.0;
                         
-                        DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
-                        
-                        [self.navigationController pushViewController:mainViewController animated:YES];
+                        if (self.beacon) {
+                            DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
+                            
+                            [self.navigationController pushViewController:mainViewController animated:YES];
+                        }else{
+                            DARMainBLEViewController *mainViewController  =[[DARMainBLEViewController alloc] init];
+                            
+                            [self.navigationController pushViewController:mainViewController animated:YES];
+                        }
                     }else{
                         self.signUpAlertLabel.text = @"An user with this email already exists";
                         self.signUpAlertLabel.alpha = 1.0;
@@ -287,10 +311,16 @@
                             self.showSignInButton.alpha = 0.0;
                             self.showSignUpButton.alpha = 0.0;
                             
+                            if (self.beacon) {
+                                DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
+                                
+                                [self.navigationController pushViewController:mainViewController animated:YES];
+                            }else{
+                                DARMainBLEViewController *mainViewController  =[[DARMainBLEViewController alloc] init];
+                                
+                                [self.navigationController pushViewController:mainViewController animated:YES];
+                            }
                             
-                            DARMainViewController *mainViewController  =[[DARMainViewController alloc] init];
-                            
-                            [self.navigationController pushViewController:mainViewController animated:YES];
                         }else if ([[object objectForKey:@"role"] isEqualToString:@"waiter"]){
                             DARUser *user = [DARUser sharedInstance];
                             [user setUser:[object objectForKey:@"name"]
@@ -304,8 +334,7 @@
                                       sex:[object objectForKey:@"sex"]];
                             
                             self.greyView.alpha = 0.0;
-                            self.showSignInButton.alpha = 0.0;
-                            self.showSignUpButton.alpha = 0.0;
+
                             
                             DARWaiterViewController *mainViewController  =[[DARWaiterViewController alloc] init];
                             
