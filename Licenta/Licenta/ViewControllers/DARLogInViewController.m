@@ -39,6 +39,8 @@
     
     self.showSignInButton.alpha = 0.0;
     self.showSignUpButton.alpha = 0.0;
+    self.showSettingsButton.alpha = 0.0;
+    self.settingsView.alpha = 0.0;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -63,9 +65,10 @@
     
     self.signInView.layer.masksToBounds = YES;
     self.signUpView.layer.masksToBounds = YES;
+    self.settingsView.layer.masksToBounds = YES;
     self.signInView.layer.cornerRadius = 20;
     self.signUpView.layer.cornerRadius = 20;
-    
+    self.settingsView.layer.cornerRadius = 20;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -85,6 +88,7 @@
                          
                              self.showSignInButton.alpha = 1.0;
                              self.showSignUpButton.alpha = 1.0;
+                             self.showSettingsButton.alpha = 1.0;
                          }];
                          
                      }];
@@ -94,6 +98,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)selectBle:(id)sender {
+}
+
+- (IBAction)selectBeacon:(id)sender {
 }
 
 - (IBAction)showSignIn:(id)sender {
@@ -127,6 +137,17 @@
     
     [UIView animateWithDuration:0.5 animations:^{
         self.greyView.alpha = 0.6;
+    }];
+}
+
+- (IBAction)showSettingsView:(id)sender {
+    [UIView animateWithDuration:0.5 animations:^{
+        if (self.settingsView.alpha == 0.0) {
+             self.settingsView.alpha = 1.0;
+        }else{
+            self.settingsView.alpha = 0.0;
+        }
+       
     }];
 }
 
