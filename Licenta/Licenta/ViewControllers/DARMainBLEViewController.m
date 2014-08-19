@@ -35,7 +35,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    
+    self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
+    [self.centralManager scanForPeripheralsWithServices:nil options:options];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -112,5 +114,32 @@
     [self.navigationController pushViewController:accountSettings animated:YES];
 }
 
+
+#pragma mark - CBCentralManagerDelegate
+
+// method called whenever you have successfully connected to the BLE peripheral
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
+{
+    
+}
+
+- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
+{
+    if (self.activeBeacon && self.activeBeaconRSSI) {
+        if (RSSI > self.activeBeaconRSSI) {
+            self.activeBeacon = peripheral;
+            NSLog(@"%@ - %@", peripheral.identifier, RSSI);
+        }
+    }else{
+        self.activeBeacon = peripheral;
+        self.activeBeaconRSSI = [NSNumber numberWithInt:-60];
+    }
+}
+
+// method called whenever the device state changes.
+- (void)centralManagerDidUpdateState:(CBCentralManager *)central
+{
+    
+}
 
 @end

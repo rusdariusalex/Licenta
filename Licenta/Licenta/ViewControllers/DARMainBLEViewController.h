@@ -8,14 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "DARTable.h"
+#import <CoreBluetooth/CoreBluetooth.h>
 
-@interface DARMainBLEViewController : UIViewController
+@interface DARMainBLEViewController : UIViewController <CBCentralManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *restaurantLabel;
 @property (weak, nonatomic) IBOutlet UILabel *homeLabel;
 @property (weak, nonatomic) IBOutlet UIView *restaurantView;
 @property (weak, nonatomic) IBOutlet UIView *homeView;
+
+@property (nonatomic, strong) CBCentralManager *centralManager;
+@property (nonatomic, strong) CBPeripheral     *activeBeacon;
+@property (nonatomic, strong) NSNumber         *activeBeaconRSSI;
 
 @property (strong, nonatomic) DARTable *table;
 
