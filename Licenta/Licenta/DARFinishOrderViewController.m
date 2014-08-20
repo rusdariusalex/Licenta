@@ -74,31 +74,15 @@
                                      }
                                      else
                                      {
-                                         float harrisConstant;
                                          
-                                         if (numberOfSteps/7 <= 5000) {
-                                             harrisConstant = 1.2;
-                                         }else if (numberOfSteps/7 > 5000 && numberOfSteps/7 <= 7500){
-                                             harrisConstant = 1.375;
-                                         }else if (numberOfSteps/7 > 7500 && numberOfSteps/7 <= 10000){
-                                             harrisConstant = 1.55;
-                                         }else if (numberOfSteps/7 > 10000 && numberOfSteps/7 <= 12500){
-                                             harrisConstant = 1.725;
-                                         }else{
-                                             harrisConstant = 1.9;
-                                         }
                                          
 
                                          if ([user.height intValue] !=0 && [user.weight intValue] != 0 && [user.age intValue] != 0 && ![user.sex isEqualToString:@""]) {
-                                             float recomended;
                                              
-                                             if ([user.sex isEqualToString:@"M"]) {
-                                                 recomended = harrisConstant*(88.362 + (13.397*[user.weight floatValue]) + (4.799*[user.height floatValue]) - (5.677*[user.age floatValue]));
-                                                 self.recomendedCalories.text = [NSString stringWithFormat:@"%.2f", recomended];
-                                             }else if ([user.sex isEqualToString:@"F"]){
-                                                 recomended = harrisConstant*(447.593 + (9.247*[user.weight floatValue]) + (3.098*[user.height floatValue]) - (4.330*[user.age floatValue]));
-                                                 self.recomendedCalories.text = [NSString stringWithFormat:@"%.2f", recomended];
-                                             }
+                                             float recommended = [self caloriesFromNumberOfSteps:numberOfSteps sex:user.sex height:user.height weight:user.weight age:user.age];
+                                             
+                                             self.recomendedCalories.text = [NSString stringWithFormat:@"%.2f", recommended];
+                                             
                                              
                                          }else{
                                              self.recomendedCalories.text = @"-";
@@ -122,6 +106,32 @@
     
     [self.tableView reloadData];
     
+}
+
+- (float)caloriesFromNumberOfSteps:(NSInteger)numberOfSteps sex:(NSString*)sex height:(NSNumber*)height weight:(NSNumber*)weight age:(NSNumber*)age{
+    float harrisConstant;
+    
+    if (numberOfSteps/7 <= 5000) {
+        harrisConstant = 1.2;
+    }else if (numberOfSteps/7 > 5000 && numberOfSteps/7 <= 7500){
+        harrisConstant = 1.375;
+    }else if (numberOfSteps/7 > 7500 && numberOfSteps/7 <= 10000){
+        harrisConstant = 1.55;
+    }else if (numberOfSteps/7 > 10000 && numberOfSteps/7 <= 12500){
+        harrisConstant = 1.725;
+    }else{
+        harrisConstant = 1.9;
+    }
+    
+    float recomended;
+    
+    if ([sex isEqualToString:@"M"]) {
+        recomended = harrisConstant*(88.362 + (13.397*[weight floatValue]) + (4.799*[height floatValue]) - (5.677*[age floatValue]));
+    }else if ([sex isEqualToString:@"F"]){
+        recomended = harrisConstant*(447.593 + (9.247*[weight floatValue]) + (3.098*[height floatValue]) - (4.330*[age floatValue]));
+    }
+    
+    return recomended;
 }
 
 - (void)viewWillAppear:(BOOL)animated{

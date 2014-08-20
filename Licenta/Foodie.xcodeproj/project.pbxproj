@@ -56,6 +56,17 @@
 		D065DED3195C0D2C00FDA495 /* DARCategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D065DED1195C0D2C00FDA495 /* DARCategoryViewController.xib */; };
 		D065DED6195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DED4195C195000FDA495 /* bkg_newsletter_sales_bookcloud_blue.png */; };
 		D065DED7195C195000FDA495 /* bkg_newsletter_sales_bookcloud_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = D065DED5195C195000FDA495 /* bkg_newsletter_sales_bookcloud_yellow.png */; };
+		D077511719A4EFC40065832A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FF0193CAB2D0043F3E7 /* Parse.framework */; };
+		D077511819A4EFDE0065832A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB1002193CAB920043F3E7 /* SystemConfiguration.framework */; };
+		D077511919A4EFE60065832A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB1000193CAB880043F3E7 /* StoreKit.framework */; };
+		D077511A19A4F03C0065832A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FFE193CAB810043F3E7 /* Security.framework */; };
+		D077511B19A4F0410065832A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FFC193CAB7A0043F3E7 /* QuartzCore.framework */; };
+		D077511C19A4F04B0065832A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FFA193CAB720043F3E7 /* MobileCoreServices.framework */; };
+		D077511D19A4F0510065832A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FF8193CAB6A0043F3E7 /* libz.dylib */; };
+		D077511E19A4F05D0065832A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FF6193CAB5F0043F3E7 /* CoreLocation.framework */; };
+		D077511F19A4F0630065832A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FF4193CAB540043F3E7 /* CFNetwork.framework */; };
+		D077512019A4F06F0065832A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB0FF2193CAB4C0043F3E7 /* AudioToolbox.framework */; };
+		D077512119A4F07C0065832A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */; };
 		D085720819614690005975CC /* DARItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D085720619614690005975CC /* DARItemViewController.m */; };
 		D085720919614690005975CC /* DARItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D085720719614690005975CC /* DARItemViewController.xib */; };
 		D085720C19614AA7005975CC /* UIScrollView+TwitterCover.m in Sources */ = {isa = PBXBuildFile; fileRef = D085720B19614AA7005975CC /* UIScrollView+TwitterCover.m */; };
@@ -67,6 +78,7 @@
 		D08A863C199A4B9800DE35C2 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = D08A863B199A4B9800DE35C2 /* tick.png */; };
 		D08A8641199A4F1D00DE35C2 /* DARMainBLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08A863F199A4F1D00DE35C2 /* DARMainBLEViewController.m */; };
 		D08A8642199A4F1D00DE35C2 /* DARMainBLEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08A8640199A4F1D00DE35C2 /* DARMainBLEViewController.xib */; };
+		D090ECD119A4ED6500465C36 /* DARTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D090ECD019A4ED6500465C36 /* DARTest.m */; };
 		D0C931FC190FF3FE0047CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FB190FF3FE0047CB9B /* Foundation.framework */; };
 		D0C931FE190FF3FE0047CB9B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */; };
 		D0C93200190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
@@ -78,7 +90,6 @@
 		D0C93216190FF3FE0047CB9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FB190FF3FE0047CB9B /* Foundation.framework */; };
 		D0C93217190FF3FE0047CB9B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C931FF190FF3FE0047CB9B /* UIKit.framework */; };
 		D0C9321F190FF3FE0047CB9B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0C9321D190FF3FE0047CB9B /* InfoPlist.strings */; };
-		D0C93221190FF3FE0047CB9B /* LicentaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C93220190FF3FE0047CB9B /* LicentaTests.m */; };
 		D0CDE46E195AC7B300848635 /* DARWaiterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CDE46C195AC7B300848635 /* DARWaiterViewController.m */; };
 		D0CDE46F195AC7B300848635 /* DARWaiterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CDE46D195AC7B300848635 /* DARWaiterViewController.xib */; };
 		D0DFED13193C4DAD00A6C951 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = D0DFED04193C4DAD00A6C951 /* AppIcon29x29.png */; };
@@ -227,6 +238,7 @@
 		D08A863E199A4F1D00DE35C2 /* DARMainBLEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARMainBLEViewController.h; path = ViewControllers/DARMainBLEViewController.h; sourceTree = "<group>"; };
 		D08A863F199A4F1D00DE35C2 /* DARMainBLEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARMainBLEViewController.m; path = ViewControllers/DARMainBLEViewController.m; sourceTree = "<group>"; };
 		D08A8640199A4F1D00DE35C2 /* DARMainBLEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARMainBLEViewController.xib; path = ViewControllers/DARMainBLEViewController.xib; sourceTree = "<group>"; };
+		D090ECD019A4ED6500465C36 /* DARTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DARTest.m; sourceTree = "<group>"; };
 		D0C931F8190FF3FE0047CB9B /* Foodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C931FB190FF3FE0047CB9B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0C931FD190FF3FE0047CB9B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -242,7 +254,6 @@
 		D0C93214190FF3FE0047CB9B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D0C9321C190FF3FE0047CB9B /* FoodieTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FoodieTests-Info.plist"; sourceTree = "<group>"; };
 		D0C9321E190FF3FE0047CB9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D0C93220190FF3FE0047CB9B /* LicentaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LicentaTests.m; sourceTree = "<group>"; };
 		D0CDE46B195AC7B300848635 /* DARWaiterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DARWaiterViewController.h; path = ViewControllers/DARWaiterViewController.h; sourceTree = "<group>"; };
 		D0CDE46C195AC7B300848635 /* DARWaiterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DARWaiterViewController.m; path = ViewControllers/DARWaiterViewController.m; sourceTree = "<group>"; };
 		D0CDE46D195AC7B300848635 /* DARWaiterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DARWaiterViewController.xib; path = ViewControllers/DARWaiterViewController.xib; sourceTree = "<group>"; };
@@ -361,6 +372,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D077512119A4F07C0065832A /* CoreGraphics.framework in Frameworks */,
+				D077512019A4F06F0065832A /* AudioToolbox.framework in Frameworks */,
+				D077511F19A4F0630065832A /* CFNetwork.framework in Frameworks */,
+				D077511E19A4F05D0065832A /* CoreLocation.framework in Frameworks */,
+				D077511D19A4F0510065832A /* libz.dylib in Frameworks */,
+				D077511C19A4F04B0065832A /* MobileCoreServices.framework in Frameworks */,
+				D077511B19A4F0410065832A /* QuartzCore.framework in Frameworks */,
+				D077511A19A4F03C0065832A /* Security.framework in Frameworks */,
+				D077511919A4EFE60065832A /* StoreKit.framework in Frameworks */,
+				D077511819A4EFDE0065832A /* SystemConfiguration.framework in Frameworks */,
+				D077511719A4EFC40065832A /* Parse.framework in Frameworks */,
 				D0C93215190FF3FE0047CB9B /* XCTest.framework in Frameworks */,
 				D0C93217190FF3FE0047CB9B /* UIKit.framework in Frameworks */,
 				D0C93216190FF3FE0047CB9B /* Foundation.framework in Frameworks */,
@@ -570,7 +592,7 @@
 		D0C9321A190FF3FE0047CB9B /* LicentaTests */ = {
 			isa = PBXGroup;
 			children = (
-				D0C93220190FF3FE0047CB9B /* LicentaTests.m */,
+				D090ECD019A4ED6500465C36 /* DARTest.m */,
 				D0C9321B190FF3FE0047CB9B /* Supporting Files */,
 			);
 			path = LicentaTests;
@@ -974,7 +996,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0C93221190FF3FE0047CB9B /* LicentaTests.m in Sources */,
+				D090ECD119A4ED6500465C36 /* DARTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1124,9 +1146,10 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Licenta/Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Licenta/Licenta-Prefix.pch";
+				GCC_PREFIX_HEADER = "Licenta/Foodie-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1146,9 +1169,10 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)/Licenta/Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Licenta/Licenta-Prefix.pch";
+				GCC_PREFIX_HEADER = "Licenta/Foodie-Prefix.pch";
 				INFOPLIST_FILE = "LicentaTests/FoodieTests-Info.plist";
 				PRODUCT_NAME = FoodieTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";

@@ -24,4 +24,6 @@
 - (IBAction)backButtonPressed:(id)sender;
 - (IBAction)finishOrder:(id)sender;
 
+- (float)caloriesFromNumberOfSteps:(NSInteger)numberOfSteps sex:(NSString*)sex height:(NSNumber*)height weight:(NSNumber*)weight age:(NSNumber*)age;
+
 @end
