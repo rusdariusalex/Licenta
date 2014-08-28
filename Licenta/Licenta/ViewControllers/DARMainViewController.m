@@ -81,7 +81,6 @@
             
             break;
         case CLRegionStateOutside:
-        case CLRegionStateUnknown:
         default:
             // stop ranging beacons, etc
             NSLog(@"Region unknown");
@@ -117,7 +116,7 @@
                     }];
 
                 }
-            }else if (beacon.major == self.activeBeacon.major && beacon.proximity != CLProximityNear){
+            }else if (beacon.major == self.activeBeacon.major && beacon.proximity != CLProximityNear && beacon.proximity != CLProximityImmediate){
                 [self.table resetInfo];
                 self.activeBeacon = nil;
                 
