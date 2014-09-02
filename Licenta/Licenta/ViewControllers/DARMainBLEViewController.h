@@ -10,6 +10,16 @@
 #import "DARTable.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
+#define n -42.119
+//#define A -58.889
+#define A -64.889
+
+/*VALUE FOR FILTER RSSI*/
+#define limitValueRSSI -30
+
+/*VALUE FOR FILTER DISTANCE*/
+#define limitValueDistance 200
+
 @interface DARMainBLEViewController : UIViewController <CBCentralManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *welcomeLabel;

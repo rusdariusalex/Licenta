@@ -15,7 +15,13 @@
 #import <Parse/Parse.h>
 #import "DARSelectRestaurantViewController.h"
 
-@interface DARMainBLEViewController ()
+@interface DARMainBLEViewController (){
+    BOOL isFirst, isFirstDistance;
+    NSNumber *filtruRSSI;
+    int count;
+    float number1,number2,number3,number4,number5;
+    float distanceDevice;
+}
 
 @end
 
@@ -139,6 +145,101 @@
 // method called whenever the device state changes.
 - (void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
+    switch (central.state) {
+        case CBCentralManagerStatePoweredOn:
+            
+            break;
+            
+        default:
+            NSLog(@"nu e pornit");
+            break;
+    }
+}
+
+#pragma mark - RSSI
+
+-(void)calculateDistanceWithRSSI:(float) RSSI
+{
+    double frac =(A + RSSI);
+    double distance=pow(10,frac/n);
+    isFirstDistance = TRUE;
+    [self filteringDistance:distance];
+}
+
+/*FILTER FOR  RSSI*/
+-(void)filteringRSSI:(NSNumber*)RSSI
+{
+    NSNumber *limit =[[NSNumber alloc]initWithInt:limitValueRSSI];
+    double a=([limit floatValue] +[filtruRSSI floatValue]);
+    NSNumber *testADD =[NSNumber numberWithDouble:a];
+    double b=([filtruRSSI floatValue] -[limit floatValue]);
+    NSNumber *testSUB=[NSNumber numberWithDouble:b ];
+    
+    if (isFirst) {
+        filtruRSSI=RSSI;
+        isFirst=FALSE;
+        //  NSLog(@"filteringRSSI first filtruRSSI(floatvalue) ->%f \n",[filtruRSSI floatValue]);
+    }else{
+        
+        if(RSSI > testADD   && RSSI < testSUB )
+        {
+            double c=(([filtruRSSI floatValue]+[RSSI floatValue])/2);
+            filtruRSSI=[NSNumber numberWithDouble:c];
+            //  NSLog(@"filteringRSSI second filtruRSSI(floatValue) ->%f \n",[filtruRSSI floatValue]);
+            
+        }
+        
+    }
+    count++;
+    if (count==1) {
+        number1=distanceDevice;
+    }else if (count==2){
+        number2=distanceDevice;
+    }else if(count==3)
+    {
+        number3=distanceDevice;
+    }
+    else if(count==4)
+    {
+        number4=distanceDevice;
+    }else if(count ==5 )
+    {
+        number5=distanceDevice;
+        count=0;
+        double rezultat =(number1+number2+number3+number4+number5)/5;
+        NSLog(@"\n \t \t Dupa 5 modificari distanta este %f",rezultat);
+        
+    }
+    
+    
+}
+
+/*FILTER FOR DISTANCE*/
+-(void)filteringDistance:(float)distance
+{
+    double a=(limitValueDistance +distanceDevice);
+    double b=(distanceDevice-limitValueDistance);
+    
+    if (isFirstDistance) {
+        distanceDevice=distance;
+        isFirstDistance=FALSE;
+        NSLog(@"filteringDistance first distanceDevice ->%f \n",distanceDevice);
+        
+        
+    }else{
+        
+        if(distance > a   && distance < b )
+        {
+            
+            double c=((distanceDevice+distance)/2);
+            distanceDevice=c;
+            NSLog(@"filteringDistance second distanceDevice ->%f \n",distanceDevice);
+            
+            
+        }
+        
+    }
+    
     
 }
 
