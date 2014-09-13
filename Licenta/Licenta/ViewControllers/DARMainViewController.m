@@ -83,6 +83,7 @@
         case CLRegionStateOutside:
         default:
             // stop ranging beacons, etc
+            [self.locationManager stopRangingBeaconsInRegion:self.myBeaconRegion];
             NSLog(@"Region unknown");
     }
 }

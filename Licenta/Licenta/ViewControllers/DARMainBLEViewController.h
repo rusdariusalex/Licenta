@@ -11,8 +11,8 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 #define n -42.119
-//#define A -58.889
-#define A -64.889
+#define A -58
+//#define A -64.889
 
 /*VALUE FOR FILTER RSSI*/
 #define limitValueRSSI -30

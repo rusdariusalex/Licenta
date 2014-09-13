@@ -16,11 +16,7 @@
 #import "DARSelectRestaurantViewController.h"
 
 @interface DARMainBLEViewController (){
-    BOOL isFirst, isFirstDistance;
-    NSNumber *filtruRSSI;
-    int count;
-    float number1,number2,number3,number4,number5;
-    float distanceDevice;
+    NSMutableArray *rssiValues;
 }
 
 @end
@@ -44,6 +40,8 @@
     self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
     NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
     [self.centralManager scanForPeripheralsWithServices:nil options:options];
+    
+    rssiValues = [[NSMutableArray alloc] init];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -130,12 +128,41 @@
 }
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
-{
+{    
     if (self.activeBeacon && self.activeBeaconRSSI) {
         if (RSSI > self.activeBeaconRSSI) {
             self.activeBeacon = peripheral;
-            NSLog(@"%@ - %@", peripheral.identifier, RSSI);
+//            NSLog(@"%@ - %@", peripheral.identifier, RSSI);
+            
+            self.table = [DARTable sharedInstance];
+            PFQuery *query = [PFQuery queryWithClassName:@"Table"];
+            [query whereKey:@"identifier" equalTo:[peripheral.identifier UUIDString]];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (!error) {
+                    
+                    PFObject *object = [objects firstObject];
+                    
+                    self.table.restaurantName = [object objectForKey:@"restaurantName"];
+                    self.table.tableNo = [object objectForKey:@"tableNo"];
+                    self.table.major = [object objectForKey:@"major"];
+                    self.table.minor = [object objectForKey:@"minor"];
+                    
+                    [self showAtRestaurantView];
+                }
+            }];
         }
+        
+        if ([peripheral.identifier isEqual:self.activeBeacon.identifier]) {
+//            NSLog(@"%@ - %@", peripheral.identifier, RSSI);
+            float rssi = [self filterRSSI:RSSI];
+            //        NSLog(@"%@, %f",RSSI,rssi);
+            double distance = [self calculateDistanceWithRSSI:rssi];
+            
+            if (distance > 1500) {
+                [self showAtHomeView];
+            }
+        }
+        
     }else{
         self.activeBeacon = peripheral;
         self.activeBeaconRSSI = [NSNumber numberWithInt:-60];
@@ -158,89 +185,33 @@
 
 #pragma mark - RSSI
 
--(void)calculateDistanceWithRSSI:(float) RSSI
+- (float)filterRSSI:(NSNumber*)RSSI{
+    if (rssiValues.count <5) {
+        [rssiValues addObject:RSSI];
+    }else{
+        [rssiValues removeObjectAtIndex:0];
+        [rssiValues addObject:RSSI];
+    }
+    
+    float media = 0;
+    
+    for (NSNumber *value in rssiValues) {
+        media = media + [value floatValue];
+    }
+    
+    media = media/rssiValues.count;
+    
+    return media;
+}
+
+-(double)calculateDistanceWithRSSI:(float) RSSI
 {
     double frac =(A + RSSI);
     double distance=pow(10,frac/n);
-    isFirstDistance = TRUE;
-    [self filteringDistance:distance];
+//    NSLog(@"%f",distance);
+    return distance;
 }
 
-/*FILTER FOR  RSSI*/
--(void)filteringRSSI:(NSNumber*)RSSI
-{
-    NSNumber *limit =[[NSNumber alloc]initWithInt:limitValueRSSI];
-    double a=([limit floatValue] +[filtruRSSI floatValue]);
-    NSNumber *testADD =[NSNumber numberWithDouble:a];
-    double b=([filtruRSSI floatValue] -[limit floatValue]);
-    NSNumber *testSUB=[NSNumber numberWithDouble:b ];
-    
-    if (isFirst) {
-        filtruRSSI=RSSI;
-        isFirst=FALSE;
-        //  NSLog(@"filteringRSSI first filtruRSSI(floatvalue) ->%f \n",[filtruRSSI floatValue]);
-    }else{
-        
-        if(RSSI > testADD   && RSSI < testSUB )
-        {
-            double c=(([filtruRSSI floatValue]+[RSSI floatValue])/2);
-            filtruRSSI=[NSNumber numberWithDouble:c];
-            //  NSLog(@"filteringRSSI second filtruRSSI(floatValue) ->%f \n",[filtruRSSI floatValue]);
-            
-        }
-        
-    }
-    count++;
-    if (count==1) {
-        number1=distanceDevice;
-    }else if (count==2){
-        number2=distanceDevice;
-    }else if(count==3)
-    {
-        number3=distanceDevice;
-    }
-    else if(count==4)
-    {
-        number4=distanceDevice;
-    }else if(count ==5 )
-    {
-        number5=distanceDevice;
-        count=0;
-        double rezultat =(number1+number2+number3+number4+number5)/5;
-        NSLog(@"\n \t \t Dupa 5 modificari distanta este %f",rezultat);
-        
-    }
-    
-    
-}
 
-/*FILTER FOR DISTANCE*/
--(void)filteringDistance:(float)distance
-{
-    double a=(limitValueDistance +distanceDevice);
-    double b=(distanceDevice-limitValueDistance);
-    
-    if (isFirstDistance) {
-        distanceDevice=distance;
-        isFirstDistance=FALSE;
-        NSLog(@"filteringDistance first distanceDevice ->%f \n",distanceDevice);
-        
-        
-    }else{
-        
-        if(distance > a   && distance < b )
-        {
-            
-            double c=((distanceDevice+distance)/2);
-            distanceDevice=c;
-            NSLog(@"filteringDistance second distanceDevice ->%f \n",distanceDevice);
-            
-            
-        }
-        
-    }
-    
-    
-}
 
 @end
