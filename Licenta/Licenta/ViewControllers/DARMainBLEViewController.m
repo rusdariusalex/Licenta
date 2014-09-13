@@ -51,11 +51,12 @@
     self.navigationController.navigationBarHidden = YES;
     self.restaurantView.alpha = 0.0;
     
-//    if (self.activeBeacon == nil) {
+    self.table = [DARTable sharedInstance];
+    if ([self.table.restaurantName isEqualToString:@""]) {
         [self showAtHomeView];
-//    }else{
-//        [self showAtRestaurantView];
-//    }
+    }else{
+        [self showAtRestaurantView];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,13 +104,14 @@
 }
 
 - (IBAction)addItems:(id)sender {
-//    if (self.activeBeacon != nil) {
-//        DARCategoryViewController *categoryView = [[DARCategoryViewController alloc] init];
-//        [self.navigationController pushViewController:categoryView animated:YES];
-//    }else{
+    self.table = [DARTable sharedInstance];
+    if (![self.table.restaurantName isEqualToString:@""]) {
+        DARCategoryViewController *categoryView = [[DARCategoryViewController alloc] init];
+        [self.navigationController pushViewController:categoryView animated:YES];
+    }else{
         DARSelectRestaurantViewController *selectRestaurant = [[DARSelectRestaurantViewController alloc] init];
         [self.navigationController pushViewController:selectRestaurant animated:YES];
-//    }
+    }
     
 }
 
@@ -159,6 +161,7 @@
             double distance = [self calculateDistanceWithRSSI:rssi];
             
             if (distance > 1500) {
+                [self.table resetInfo];
                 [self showAtHomeView];
             }
         }

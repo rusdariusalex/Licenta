@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Licenta/ViewControllers/DARMainBLEViewController.m"
-            timestampString = "432288430.307855"
+            timestampString = "432289726.24639"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "-calculateDistanceWithRSSI:"
             landmarkType = "5">
          </BreakpointContent>
